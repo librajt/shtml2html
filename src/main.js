@@ -11,11 +11,12 @@ var program = require('commander'),
     fs  = require('fs'),
     path = require('path');
 
-var ROOT = __dirname + '/' + '../../';
+var ROOT = __dirname + '/';
 
 program
     .version('0.0.1')
     .usage('node shtml2html <"dir1" [,"dir2" [,"dir3",[...]]]>')
+    .option('-r', '--root [path]', '服务器根目录')
     .parse(process.argv);
 
 var dirs = process.argv[2].split(',');
@@ -123,14 +124,22 @@ var copyDir = function(src, dest, filters, encode) {
 };
 
 var merge = function(src) {
-    var file = fs.readFileSync(src, 'utf-8'), shtml, replacement;
-    shtml = file.indexOf('<!--#include file=""-->');
+    var file = fs.readFileSync(src, 'utf-8'), 
+        basePath = path.dirname(src) + '/', 
+        baseName = path.basename(src, '.shtml'), 
+        incs, 
+        dest = basePath + baseName + '.html';
     
-    if (shtml) {
-        if (fs.existsSync(shtml)) replacement = fs.readFileSync(shtml, 'utf-8');
-        else replacement = merge(shtml);
-        file = file.replace(/##filename##/g, replacement);
-    }
+    incs = file.match(/<!--#include\s.*"-->/ig) || [];
+    incs.forEach(function(inc, i) {
+        var incSrc = inc.match(/"(\w.*)"-->/i)[1], replacement;
+        if (incSrc.charAt(0) !== '/') incSrc = basePath + incSrc;
+        
+        if (fs.existsSync(dest)) replacement = fs.readFileSync(incSrc, 'utf-8');
+        else replacement = merge(incSrc);
+        
+        file = file.replace(inc, replacement);
+    });
     
     fs.writeFileSync(dest, file, 'utf-8');
     return file;
@@ -139,12 +148,21 @@ var merge = function(src) {
 
 
 
-var main = function() {
-    
+var handle = function(dir) {
+    var files = fs.readdirSync(dir);
+    files.forEach(function(src, i) {
+        src = ROOT + dir + src;
+        if (fs.statSync(src).isFile()) {
+            merge(src);
+        }
+    });
 };
 
 
-
+for(var i= 0, j = dirs.length; i < j; i++) {
+    if (dirs[i].charAt(dirs[i].length - 1) !== '/') dirs[i] += '/';
+    handle(dirs[i]);
+}
 
 
 
