@@ -30,6 +30,7 @@ The best example is the `cli.js` source file in the `src` directory. Also, this 
 ```
 var shtml2html = require('shtml2html');
 shtml2html(pathFrom, pathTo, pathWwwroot);
+```
 
 
 RELEASE LOG
