@@ -5,15 +5,14 @@ var encoding = 'binary';
 var ROOT = process.cwd() + '/';
 
 var err = function(msg) {
-    console.log(['\x1B[31m' , msg, '\x1B[39m'].join(''));
+    console.log(['\x1B[31m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
 };
 var log = function(msg) {
-    console.log(['\x1B[32m' , msg, '\x1B[39m'].join(''));
+    console.log(['\x1B[32m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
 };
 var warn = function(msg) {
-    console.log(['\x1B[33m' , msg, '\x1B[39m'].join(''));
+    console.log(['\x1B[33m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
 };
-
 
 // 递归建立目录
 var mkdir = function(dest) {
@@ -34,17 +33,25 @@ var mkdir = function(dest) {
     }
 };
 
+var fixPath = function(src) {
+    if (src && src.charAt(src.length - 1) !== '/') src += '/';
+    return src;
+};
 
-var merge = function(src, dest) {
+var status = ['success', 'already merged', 'fail'];
+
+var merge = function(src, dest, wwwroot) {
     var baseSrc = path.dirname(src) + '/', 
         baseDest = path.dirname(dest) + '/', 
         file = '', 
-        incs;
+        incs, result = 0;
     dest = dest.replace(/.shtml$/i, '.html');
 
     if (fs.existsSync(src)) {
         if (fs.existsSync(dest)) {
             file = fs.readFileSync(dest, encoding);
+            result = 1;
+            log('[' + status[result] + '] ' + src);
         }
         else {
             file = fs.readFileSync(src, encoding), 
@@ -54,38 +61,48 @@ var merge = function(src, dest) {
                 var incFile = inc.match(/"(.+)"-->/i)[1],
                     replacement, incSrc, incDest;
                 
-                if (incFile.charAt(0) === '/' && wwwroot !== undefined) {
-                    warn('[merge] web root path needed to find file ' + incFile);
-                    return;
+                if (incFile.charAt(0) === '/') {
+                    if (wwwroot === undefined) {
+                        result = 2;
+                        warn('--wwwroot needed to find file ' + incFile);
+                        return;
+                    }
+                    incSrc = path.resolve(wwwroot + incFile);
+                    incDest = path.resolve(wwwroot + incFile);
                 }
                 else {
                     incSrc = path.resolve(baseSrc + incFile);
                     incDest = path.resolve(baseDest + incFile);
                 }
-                replacement = merge(incSrc, incDest);
+                replacement = merge(incSrc, incDest, wwwroot);
                 file = file.replace(inc, replacement);
             });
 
             mkdir(dest);
             fs.writeFileSync(dest, file, encoding);
-            log('[merge] ' + dest)
+            log('[' + status[result] + '] ' + dest);
         }
     }
     else {
-        err('[merge] file ' + src + ' not found');
+        result = 2;
+        err('[' + status[result] + '] file ' + src + ' not found');
     }
 
     return file;
 };
 
 
-var shtml2html = function(from, to) {
+var shtml2html = function(from, to, wwwroot) {
+    from = fixPath(from);
+    to = fixPath(to);
+    wwwroot = fixPath(wwwroot);
+
     var files = fs.readdirSync(from);
     files.forEach(function(src, i) {
         fileSrc = path.resolve(ROOT + from + src);
         fileDest = path.resolve(ROOT + to + src);
         if (fs.statSync(fileSrc).isFile()) {
-            merge(fileSrc, fileDest);
+            merge(fileSrc, fileDest, wwwroot);
         }
     });
 };
