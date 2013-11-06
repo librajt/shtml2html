@@ -1,0 +1,14 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+div.framTop>div.header>h1.logo+ul.nav>li*4
+
+div.framMain>div.body
+
+div.framBottom>div.footer
+
+</body>
+</html>

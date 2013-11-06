@@ -1,0 +1,11 @@
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal;}
+ul,ol,li{list-style:none;}
+em,i,b{font-style:normal;}
+img{border:none;}
+input,img,video{vertical-align:middle;}
+input[type="text"],input[type="password"],input[type="button"],input[type="submit"],button,textarea{-webkit-appearance:none;}
+a{text-decoration:none;}
+body{min-width:320px;}
+
