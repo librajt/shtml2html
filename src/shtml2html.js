@@ -1,4 +1,4 @@
-var fs  = require('fs'),
+﻿var fs  = require('fs'),
     path = require('path');
 
 var encoding = 'binary';
@@ -14,7 +14,6 @@ var warn = function(msg) {
     console.log(['\x1B[33m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
 };
 
-// 递归建立目录
 var mkdir = function(dest) {
     var destDirs = dest.split('\\'),
         destDirsLen = destDirs.length,
@@ -99,6 +98,7 @@ var shtml2html = function(from, to, wwwroot) {
 
     var files = fs.readdirSync(from);
     files.forEach(function(src, i) {
+        if (path.extname(src) !== '.shtml') return;
         fileSrc = path.resolve(ROOT + from + src);
         fileDest = path.resolve(ROOT + to + src);
         if (fs.statSync(fileSrc).isFile()) {

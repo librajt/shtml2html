@@ -6,9 +6,9 @@ var program = require('commander'),
 program
     .version('0.0.2')
     .usage('shtml2html [options]')
-    .option('-s, --source [value]', 'default is current directory')
-    .option('-d, --destination [value]', 'default is a temp directory in the source directory')
-    .option('-w, --wwwroot [value]', 'wwwroot directory, help to find include files refer in the absolute path')
+    .option('-s, --source [value]', 'optional, default is current directory')
+    .option('-d, --destination [value]', 'optional, default is a temp directory in the source directory')
+    .option('-w, --wwwroot [value]', 'optional, only needed when have to find include files refer with absolute path')
     .parse(process.argv);
 
 var source = program.source || './',
