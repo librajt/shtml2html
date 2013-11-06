@@ -15,21 +15,27 @@ var ROOT = __dirname + '/';
 
 program
     .version('0.0.1')
-    .usage('node shtml2html <"dir1" [,"dir2" [,"dir3",[...]]]>')
+    .usage('node shtml2html <"source dir"> [<"destination dir">]')
     .option('-r', '--root [path]', '服务器根目录')
     .parse(process.argv);
 
-var dirs = process.argv[2].split(',');
+var srcDirs = process.argv[2].split(',');
+var destDirs = process.argv[3].split(',');
 
 var warn = function(msg) {
     console.log(['\x1B[33m' , msg, '\x1B[39m'].join(''));
-}
+};
 var log = function(msg) {
     console.log(['\x1B[32m' , msg, '\x1B[39m'].join(''));
-}
+};
 var err = function(msg) {
     console.log(['\x1B[31m' , msg, '\x1B[39m'].join(''));
-}
+};
+
+var fixPath = function(src) {
+    if (src.charAt(src.length - 1) !== '/') src += '/';
+    return src;
+};
 
 var rmdir = (function() {
     function iterator(url, dirs) {
@@ -67,16 +73,17 @@ var mkdir = function(dest) {
         destDirsLen = destDirs.length,
         destDir = '';
 
-    log('[mkdir] ' + dest);
-    destDirs.forEach(function(dir, i) {
-        if (i < destDirsLen - 1) {
-            destDir += dir + '/';
-            if (!fs.existsSync(destDir)) {
-                fs.mkdirSync(destDir);
-                log('  ' + destDir + '');
+    if (!fs.existsSync(dest)) {
+        destDirs.forEach(function(dir, i) {
+            if (i < destDirsLen - 1) {
+                destDir += dir + '/';
+                if (!fs.existsSync(destDir)) {
+                    fs.mkdirSync(destDir);
+                    log('[mkdir] ' + path.resolve(destDir) + '');
+                }
             }
-        }
-    });
+        });
+    }
 };
 
 // filters 为用“|”分隔的扩展名列表，不带“.”，扩展名为 filters 列表中者通过复制
@@ -104,8 +111,8 @@ var copyFile = function(src, dest, filters, encode) {
 
 var copyDir = function(src, dest, filters, encode) {
     var files, encode = encode || 'binary';
-    if (src.charAt(src.length - 1) !== '/') src += '/';
-    if (dest.charAt(dest.length - 1) !== '/') dest += '/';
+    src = fixPath(src);
+    dest = fixPath(dest);
     
     if (!fs.statSync(src).isDirectory()) {
         err('[copyDir] ' + src + ' is not a Directory');
@@ -123,45 +130,57 @@ var copyDir = function(src, dest, filters, encode) {
     log('[copyDir] from [' + src + '] to [' + dest + ']');
 };
 
-var merge = function(src) {
+var merge = function(src, dest) {
     var file = fs.readFileSync(src, 'utf-8'), 
-        basePath = path.dirname(src) + '/', 
-        baseName = path.basename(src, '.shtml'), 
-        incs, 
-        dest = basePath + baseName + '.html';
-    
+        baseSrc = path.dirname(src) + '/', 
+        baseDest = path.dirname(dest) + '/', 
+        incs;
+    dest = dest.replace(/.shtml$/i, '.html');
     incs = file.match(/<!--#include\s.*"-->/ig) || [];
-    incs.forEach(function(inc, i) {
-        var incSrc = inc.match(/"(\w.*)"-->/i)[1], replacement;
-        if (incSrc.charAt(0) !== '/') incSrc = basePath + incSrc;
-        
-        if (fs.existsSync(dest)) replacement = fs.readFileSync(incSrc, 'utf-8');
-        else replacement = merge(incSrc);
-        
-        file = file.replace(inc, replacement);
-    });
     
+    incs.forEach(function(inc, i) {
+        var incFile = inc.match(/"(\w.*)"-->/i)[1],
+            replacement;
+        
+        if (incFile.charAt(0) === '/') {
+            warn('[merge] web root path needed...');
+            return;
+        }
+        else {
+            incSrc = baseSrc + incFile;
+            incDest = baseDest + incFile;
+
+            if (fs.existsSync(dest)) replacement = fs.readFileSync(incSrc, 'utf-8');
+            else replacement = merge(incSrc, incDest);
+
+            file = file.replace(inc, replacement);
+        }
+    });
+    mkdir(dest);
     fs.writeFileSync(dest, file, 'utf-8');
+    log('[merge] ' + dest)
     return file;
 };
 
 
 
 
-var handle = function(dir) {
-    var files = fs.readdirSync(dir);
+var handle = function(from, to) {
+    var files = fs.readdirSync(from);
     files.forEach(function(src, i) {
-        src = ROOT + dir + src;
-        if (fs.statSync(src).isFile()) {
-            merge(src);
+        fileSrc = path.resolve(ROOT + from + src);
+        fileDest = path.resolve(ROOT + to + src);
+        if (fs.statSync(fileSrc).isFile()) {
+            merge(fileSrc, fileDest);
         }
     });
 };
 
 
-for(var i= 0, j = dirs.length; i < j; i++) {
-    if (dirs[i].charAt(dirs[i].length - 1) !== '/') dirs[i] += '/';
-    handle(dirs[i]);
+for(var i= 0, j = srcDirs.length; i < j; i++) {
+    srcDirs[i] = fixPath(srcDirs[i]);
+    destDirs[i] = fixPath(destDirs[i]);
+    handle(srcDirs[i], destDirs[i]);
 }
 
 
