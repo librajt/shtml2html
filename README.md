@@ -19,11 +19,11 @@ shtml2html can run without any option, in this condition, the program will scan 
 
 The available options are:
 ```
-    -h, --help                 output usage information
-    -v, --version              output the version number
-    -s, --source [value]       default is current directory
-    -d, --destination [value]  default is a temp directory in the source directory
-    -w, --wwwroot [value]      wwwroot directory, help to find include files refer in the absolute path
+-h, --help                 output usage information
+-v, --version              output the version number
+-s, --source [value]       default is current directory
+-d, --destination [value]  default is a temp directory in the source directory
+-w, --wwwroot [value]      wwwroot directory, help to find include files refer in the absolute path
 ```
 USAGE -- nodejs file  // TODO
 ----------
