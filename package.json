@@ -1,0 +1,24 @@
+{
+  "name": "shtml2html",
+  "version": "0.0.1",
+  "description": "a tool merge shtml file to html files",
+  "main": "./src/shtml2html.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/librajt/shtml2html.git"
+  },
+  "keywords": [
+    "shtml",
+    "html",
+    "shtml2html",
+    "nodejs"
+  ],
+  "author": "librajt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/librajt/shtml2html/issues"
+  }
+}
