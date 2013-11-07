@@ -2,27 +2,74 @@
 <title></title>
 <!--#include file="inc/_link_g.shtml"-->
 </head>
+
 <body>
 
-<div class="pageHead">
-    <div class="header">
-        <h1 class="logo"><img src="" alt=""></h1>
-        <ul class="nav">
-            <li><a href="#3">000</a></li>
-            <li><a href="#3">000</a></li>
-            <li><a href="#3">000</a></li>
-            <li><a href="#3">000</a></li>
-        </ul>
+<!--#include file="inc/pageHead.shtml"-->
+
+<div class="pageBody">
+    <div class="body">
+        <div class="introBlock">
+            <div class="slider">...</div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="introBlock">
+            <div class="head">
+                <h2>Protfolio</h2>
+                <a href="#3" class="more +">more +</a>
+            </div>
+            <div class="cnt">
+                <ul class="protfolioCards box">
+                    <li class="protfolioCard">
+                        <a href=""><img src="" alt=""></a>
+                        <div class="title"><a href=""></a></div>
+                        <div class="info"></div>
+                    </li>
+                    <li class="protfolioCard">
+                        <a href=""><img src="" alt=""></a>
+                        <div class="title"><a href=""></a></div>
+                        <div class="info"></div>
+                    </li>
+                    <li class="protfolioCard">
+                        <a href=""><img src="" alt=""></a>
+                        <div class="title"><a href=""></a></div>
+                        <div class="info"></div>
+                    </li>
+                    <li class="protfolioCard">
+                        <a href=""><img src="" alt=""></a>
+                        <div class="title"><a href=""></a></div>
+                        <div class="info"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="introBlock">
+            <div class="head">
+                <h2>Protfolio</h2>
+                <a href="#3" class="more +">more +</a>
+            </div>
+            <div class="cnt">
+                <ul class="blogCards">
+                    <li class="blogCard box">
+                        <div class="img"><img src="" alt=""></div>
+                        <p class="title">Guido Gobino: the most famous chocolate manufacturer in town!</p>
+                        <p class="datetime">January 22, 2011 · 12 Comments</p>
+                        <p class="leadin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit […]</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="line"></div>
     </div>
 </div>
 
-<div class="pageBody">
-    <div class="body"></div>
-</div>
-
-<div class="pageFoot">
-    <div class="footer"></div>
-</div>
+<!--#include file="inc/pageFoot.shtml"-->
 
 </body>
 </html>
