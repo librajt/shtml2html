@@ -1,8 +1,9 @@
 shtml2html
 ==========
-shtml2html is a HTML parser tool that will make include shtml files inline and save as html files.
+[![NPM version](https://badge.fury.io/js/shtml2html.png)](http://badge.fury.io/js/shtml2html)
+shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/shtml2html/test/inc/file.shtml"-->` will be replaced by the content of file `inc/file.shtml`.
 
-INSTALL
+Install
 ----------
 Install module with npm:
 ```
@@ -10,12 +11,12 @@ npm install shtml2html -g
 ```
 
 
-USAGE -- command line
+Usage -- command line
 ----------
 ```
 shtml2html [options]
 ```
-shtml2html can run without any option, in this condition, the program will scan the current directory and handle the files, then output them to the new temp folder in the current directory, named `_shtml2html_temp`.
+shtml2html can run without any option, in this condition, the program will scan the current directory and handle the files, then output them to the new temp folder in the current directory with name start `_shtml2html_`.
 
 The available options are:
 ```
@@ -47,7 +48,7 @@ The list typo of path in command line are equal, but be carefule of the `\` and 
 ..\\dest
 ```
 
-USAGE -- nodejs file  // TODO
+Usage -- nodejs file  // TODO
 ----------
 The best example is the `cli.js` source file in the `src` directory. Also, this is a quick start:
 ```
@@ -56,12 +57,13 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 ```
 
 
-RELEASE LOG
+Release Log
 ----------
 ###1.0.0 - 2013.11.6
 First release version
 
-
-
+Links
+----------
+[http://www.w3.org/Jigsaw/Doc/User/SSI.html](http://www.w3.org/Jigsaw/Doc/User/SSI.html)
 
 

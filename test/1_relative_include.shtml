@@ -9,13 +9,13 @@
 <body>
 
 <p>next is a include file: </p>
-<!--#include file="inc/file.shtml"-->
+<!--#include file="inc/file.shtml" -->
 
 <p>next is a include file: </p>
 <!--#include file="inc/file.shtml"-->
 
 <p>next is a include file: </p>
-<!--#include file="inc/file.shtml"-->
+<!--#include file="inc/file.shtml" -->
 
 </body>
 </html>

@@ -37,7 +37,7 @@ var fixPath = function(src) {
     return src;
 };
 
-var status = ['success', 'already merged', 'fail'];
+var status = [':D', ':('];
 
 var merge = function(src, dest, wwwroot) {
     var baseSrc = path.dirname(src) + '/', 
@@ -50,19 +50,18 @@ var merge = function(src, dest, wwwroot) {
         if (fs.existsSync(dest)) {
             file = fs.readFileSync(dest, encoding);
             result = 1;
-            log('[' + status[result] + '] ' + src);
         }
         else {
             file = fs.readFileSync(src, encoding), 
-            incs = file.match(/<!--#include.+"-->/ig) || [];
+            incs = file.match(/<!--#include.+"\s*-->/ig) || [];
             
             incs.forEach(function(inc, i) {
-                var incFile = inc.match(/"(.+)"-->/i)[1],
+                var incFile = inc.match(/"(.+)"\s*-->/i)[1],
                     replacement, incSrc, incDest;
                 
                 if (incFile.charAt(0) === '/') {
                     if (wwwroot === undefined) {
-                        result = 2;
+                        result = 1;
                         warn('--wwwroot needed to find file ' + incFile);
                         return;
                     }
@@ -79,11 +78,12 @@ var merge = function(src, dest, wwwroot) {
 
             mkdir(dest);
             fs.writeFileSync(dest, file, encoding);
-            log('[' + status[result] + '] ' + dest);
+            if (result === 1) err('[' + status[result] + '] ' + dest);
+            else log('[' + status[result] + '] ' + dest);
         }
     }
     else {
-        result = 2;
+        result = 1;
         err('[' + status[result] + '] file ' + src + ' not found');
     }
 

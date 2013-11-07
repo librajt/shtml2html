@@ -14,6 +14,8 @@
     "shtml",
     "html",
     "shtml2html",
+    "include",
+    "ssi",
     "nodejs"
   ],
   "bin": {

@@ -12,7 +12,7 @@ program
     .parse(process.argv);
 
 var source = program.source || './',
-    destination = program.destination || './_shtml2html_temp/',
+    destination = program.destination || './_shtml2html_' + (+new Date()) + '/',
     wwwroot = program.wwwroot;
 
 shtml2html(source, destination, wwwroot);
