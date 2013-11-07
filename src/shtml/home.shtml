@@ -4,11 +4,25 @@
 </head>
 <body>
 
-div.framTop>div.header>h1.logo+ul.nav>li*4
+<div class="pageHead">
+    <div class="header">
+        <h1 class="logo"><img src="" alt=""></h1>
+        <ul class="nav">
+            <li><a href="#3">000</a></li>
+            <li><a href="#3">000</a></li>
+            <li><a href="#3">000</a></li>
+            <li><a href="#3">000</a></li>
+        </ul>
+    </div>
+</div>
 
-div.framMain>div.body
+<div class="pageBody">
+    <div class="body"></div>
+</div>
 
-div.framBottom>div.footer
+<div class="pageFoot">
+    <div class="footer"></div>
+</div>
 
 </body>
 </html>
