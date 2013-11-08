@@ -44,10 +44,15 @@ body{min-width:1200px;background:#F4F4EE;}
 /* pageBody */
 .pageBody .body{width:1200px;margin:auto;}
 
+/* introBlock */
+.introBlock{}
+.introBlock h2{float:left;}
+.introBlock .more{float:right;}
 
 /* slider */
 .slider{}
 
-
+/* protfolioCard */
+.protfolioCards .protfolioCard{float:left;}
 
 

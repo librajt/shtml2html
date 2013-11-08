@@ -16,31 +16,31 @@
         <div class="line"></div>
 
         <div class="introBlock">
-            <div class="head">
+            <div class="head cfx">
                 <h2>Protfolio</h2>
-                <a href="#3" class="more +">more +</a>
+                <a href="#3" class="more">more +</a>
             </div>
             <div class="cnt">
-                <ul class="protfolioCards box">
+                <ul class="protfolioCards cfx box">
                     <li class="protfolioCard">
-                        <a href=""><img src="" alt=""></a>
-                        <div class="title"><a href=""></a></div>
-                        <div class="info"></div>
+                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        <div class="title"><a href="#3">Redwood Publishing</a></div>
+                        <div class="info">100 Voices student magazine</div>
                     </li>
                     <li class="protfolioCard">
-                        <a href=""><img src="" alt=""></a>
-                        <div class="title"><a href=""></a></div>
-                        <div class="info"></div>
+                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        <div class="title"><a href="#3">Redwood Publishing</a></div>
+                        <div class="info">100 Voices student magazine</div>
                     </li>
                     <li class="protfolioCard">
-                        <a href=""><img src="" alt=""></a>
-                        <div class="title"><a href=""></a></div>
-                        <div class="info"></div>
+                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        <div class="title"><a href="#3">Redwood Publishing</a></div>
+                        <div class="info">100 Voices student magazine</div>
                     </li>
                     <li class="protfolioCard">
-                        <a href=""><img src="" alt=""></a>
-                        <div class="title"><a href=""></a></div>
-                        <div class="info"></div>
+                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        <div class="title"><a href="#3">Redwood Publishing</a></div>
+                        <div class="info">100 Voices student magazine</div>
                     </li>
                 </ul>
             </div>
@@ -49,17 +49,17 @@
         <div class="line"></div>
 
         <div class="introBlock">
-            <div class="head">
-                <h2>Protfolio</h2>
-                <a href="#3" class="more +">more +</a>
+            <div class="head cfx">
+                <h2>Blog</h2>
+                <a href="#3" class="more">more +</a>
             </div>
             <div class="cnt">
-                <ul class="blogCards">
+                <ul class="blogCards cfx">
                     <li class="blogCard box">
-                        <div class="img"><img src="" alt=""></div>
+                        <div class="img"><img src="../image/blank.jpg" alt=""></div>
                         <p class="title">Guido Gobino: the most famous chocolate manufacturer in town!</p>
                         <p class="datetime">January 22, 2011 · 12 Comments</p>
-                        <p class="leadin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit […]</p>
+                        <p class="leadin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit [...]</p>
                     </li>
                 </ul>
             </div>
