@@ -1,0 +1,72 @@
+<div class="pageFoot">
+    <div class="footer">
+        <div class="widgets cfx">
+            <div class="widget widget1">
+                <div class="cnt">
+                    <h3><img src="../image/logo_small.jpg" alt="tommao"></h3>
+                    <div class="hostInfo">
+                        <p class="info">A beautiful, minimalistic, content-focused portfolio thspane. No gimmicks, no tack, just your work presented in a professional manner.</p>
+                        <p class="info">Options, widgets, sliders, portfolio managspanent... all the good stuff!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget widget2">
+                <div class="cnt">
+                    <h3>FLICKR WIDGET</h3>
+                    <div class="flickrWidgets">
+                        <div class="flickrWidgetWrap cfx">
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="flickrWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget widget3">
+                <div class="cnt">
+                    <h3>FROM THE BLOG</h3>
+                    <div class="blogCardMin">
+                        <div class="main">
+                            <div class="title"><a href="#3">Guido Gobino: the most famous chocolate manufacturer in town!</a></div>
+                            <div class="datetime">January 22, 2011 · 12 Comments</div>
+                            <div class="leadin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit...</div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class="widget widget4">
+                <div class="cnt">
+                    <h3>Weibo WIDGET</h3>
+                    <div class="weiboWidgets">
+                        <div class="weiboWidgetWrap cfx">
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            <div class="weiboWidget"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="siteinfo cfx">
+            <div class="copyright">
+                <p>&copy; Copyright 2013. Powered by <a href="#3" class="point">WordPress</a>.</p>
+                <p><a href="#3" class="point">Classica Thspane by ThspaneZilla</a></p>
+            </div>
+            <div class="credit">
+                <p>You can find us bumming around <a href="#3" class="point">Weibo</a>, <a href="#3" class="point">163</a> &amp; <a href="#3" class="point">Flickr</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -10,10 +10,8 @@
 <div class="pageBody">
     <div class="body">
         <div class="introBlock">
-            <div class="slider">...</div>
+            <div class="slider box"><br><br><br><br><br><br><br></div>
         </div>
-
-        <div class="line"></div>
 
         <div class="introBlock">
             <div class="head cfx">
@@ -21,32 +19,16 @@
                 <a href="#3" class="more">more +</a>
             </div>
             <div class="cnt">
-                <ul class="protfolioCards cfx box">
-                    <li class="protfolioCard">
-                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
-                        <div class="title"><a href="#3">Redwood Publishing</a></div>
-                        <div class="info">100 Voices student magazine</div>
-                    </li>
-                    <li class="protfolioCard">
-                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
-                        <div class="title"><a href="#3">Redwood Publishing</a></div>
-                        <div class="info">100 Voices student magazine</div>
-                    </li>
-                    <li class="protfolioCard">
-                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
-                        <div class="title"><a href="#3">Redwood Publishing</a></div>
-                        <div class="info">100 Voices student magazine</div>
-                    </li>
-                    <li class="protfolioCard">
-                        <div class="img"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
-                        <div class="title"><a href="#3">Redwood Publishing</a></div>
-                        <div class="info">100 Voices student magazine</div>
-                    </li>
-                </ul>
+                <div class="protfolioCards box">
+                    <div class="protfolioCardWrap cfx">
+<!--#include file="inc/protfolioCard.shtml"-->
+<!--#include file="inc/protfolioCard.shtml"-->
+<!--#include file="inc/protfolioCard.shtml"-->
+<!--#include file="inc/protfolioCard.shtml"-->
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="line"></div>
 
         <div class="introBlock">
             <div class="head cfx">
@@ -54,18 +36,16 @@
                 <a href="#3" class="more">more +</a>
             </div>
             <div class="cnt">
-                <ul class="blogCards cfx">
-                    <li class="blogCard box">
-                        <div class="img"><img src="../image/blank.jpg" alt=""></div>
-                        <p class="title">Guido Gobino: the most famous chocolate manufacturer in town!</p>
-                        <p class="datetime">January 22, 2011 · 12 Comments</p>
-                        <p class="leadin">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit [...]</p>
-                    </li>
-                </ul>
+                <div class="blogCards">
+                    <div class="blogCardWrap cfx">
+<!--#include file="inc/blogCard.shtml"-->
+<!--#include file="inc/blogCard.shtml"-->
+<!--#include file="inc/blogCard.shtml"-->
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="line"></div>
+        
     </div>
 </div>
 
