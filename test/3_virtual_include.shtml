@@ -7,10 +7,10 @@
 <body>
 
 <p>next is a include file: </p>
-<!--#include file="/shtml2html/test/inc/file.shtml"-->
+<!--#include virtual="/shtml2html/test/inc/file.shtml"-->
 
 <p>next is a include file: </p>
-<!--#include file="/shtml2html/test/inc/file.shtml" -->
+<!--#include virtual="/shtml2html/test/inc/file.shtml" -->
 
 </body>
 </html>

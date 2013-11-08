@@ -3,15 +3,23 @@
 
 var encoding = 'binary';
 var ROOT = process.cwd() + '/';
+var status = ['', ':D', ':(', ':|'];
 
-var err = function(msg) {
-    console.log(['\x1B[31m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
-};
-var log = function(msg) {
-    console.log(['\x1B[32m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
-};
-var warn = function(msg) {
-    console.log(['\x1B[33m' , msg.replace(process.cwd(), ''), '\x1B[39m'].join(''));
+var log = function(msg, type) {
+    msg =  msg.replace(process.cwd(), '');
+    if (!type) type = 1;
+    switch (type) {
+        case 1:
+            msg = '\x1B[32m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
+            break;
+        case 2:
+            msg = '\x1B[31m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
+            break;
+        case 3:
+            msg = '\x1B[33m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
+            break;
+    }
+    console.log(msg);
 };
 
 var mkdir = function(dest) {
@@ -37,19 +45,18 @@ var fixPath = function(src) {
     return src;
 };
 
-var status = [':D', ':('];
 
 var merge = function(src, dest, wwwroot) {
     var baseSrc = path.dirname(src) + '/', 
         baseDest = path.dirname(dest) + '/', 
-        file = '', 
-        incs, result = 0;
+        file, 
+        incs, result;
     dest = dest.replace(/.shtml$/i, '.html');
 
     if (fs.existsSync(src)) {
         if (fs.existsSync(dest)) {
             file = fs.readFileSync(dest, encoding);
-            result = 1;
+            result = 2;
         }
         else {
             file = fs.readFileSync(src, encoding), 
@@ -61,8 +68,8 @@ var merge = function(src, dest, wwwroot) {
                 
                 if (incFile.charAt(0) === '/') {
                     if (wwwroot === undefined) {
-                        result = 1;
-                        warn('--wwwroot needed to find file ' + incFile);
+                        log('need <--wwwroot> to find file ' + incFile, 3);
+                        result = 2;
                         return;
                     }
                     incSrc = path.resolve(wwwroot + incFile);
@@ -73,18 +80,24 @@ var merge = function(src, dest, wwwroot) {
                     incDest = path.resolve(baseDest + incFile);
                 }
                 replacement = merge(incSrc, incDest, wwwroot);
-                file = file.replace(inc, replacement);
+
+                if (replacement === undefined) {
+                    result = 2;
+                }
+                else {
+                    result = 1;
+                    file = file.replace(inc, replacement);
+                }
             });
 
             mkdir(dest);
             fs.writeFileSync(dest, file, encoding);
-            if (result === 1) err('[' + status[result] + '] ' + dest);
-            else log('[' + status[result] + '] ' + dest);
+            log(dest, result);
         }
     }
     else {
-        result = 1;
-        err('[' + status[result] + '] file ' + src + ' not found');
+        result = 3;
+        log('file ' + src + ' not found', result);
     }
 
     return file;
@@ -105,6 +118,7 @@ var shtml2html = function(from, to, wwwroot) {
             merge(fileSrc, fileDest, wwwroot);
         }
     });
+    log('Done!')
 };
 
 
