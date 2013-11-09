@@ -1,0 +1,29 @@
+                        <div class="siteSide box">
+                            <div class="search">
+                                <form>
+                                    <input type="text" class="key" value="Search" onfocus="if(this.value=='Search')this.value='';" onblur="if(this.value=='')this.value='Search';">
+                                    <input type="submit" class="btn" value="">
+                                </form>
+                            </div>
+                            <div class="latestPosts">
+                                <div class="latestPostWrap">
+<!--#include file="latestPost.shtml"-->
+<!--#include file="latestPost.shtml"-->
+<!--#include file="latestPost.shtml"-->
+<!--#include file="latestPost.shtml"-->
+                                </div>
+                            </div>
+
+                            <div class="siteAd">
+                                <div class="ad"><a href="#3"><img src="../image/blank.jpg" alt=""></a></div>
+                            </div>
+
+                            <div class="latestComments">
+                                <div class="h3">LATEST COMMENTS</div>
+                                <div class="latestCommentWrap">
+<!--#include file="latestComment.shtml"-->
+<!--#include file="latestComment.shtml"-->
+<!--#include file="latestComment.shtml"-->
+                                </div>
+                            </div>
+                        </div>

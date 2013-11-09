@@ -13,6 +13,8 @@
             <div class="slider box"><br><br><br><br><br><br><br></div>
         </div>
 
+        <div class="line"></div>
+
         <div class="introBlock">
             <div class="head cfx">
                 <h2>Protfolio</h2>
@@ -30,6 +32,8 @@
             </div>
         </div>
 
+        <div class="line"></div>
+
         <div class="introBlock">
             <div class="head cfx">
                 <h2>Blog</h2>
@@ -45,6 +49,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="line"></div>
         
     </div>
 </div>
