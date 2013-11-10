@@ -48,8 +48,6 @@
                             </div>
                         </div>
 
-                        <div class="line"></div>
-
                         <div class="comments">
                             <div class="h3">COMMENTS</div>
                             
@@ -57,7 +55,7 @@
                                 <li class="commentWrap">
 <!--#include file="inc/commentMain.shtml"-->
                                     <div class="inlineReply">
-<!--#include file="inc/replyForm.shtml"-->
+<!--#include file="inc/commentForm.shtml"-->
                                     </div>
                                     <ol class="commentList">
                                         <li class="commentWrap">
@@ -74,6 +72,10 @@
                             </ol>
 
 
+                        </div>
+                        <div class="commentArea">
+                            <div class="h3">Leave a Comment</div>
+<!--#include file="inc/commentForm.shtml"-->
                         </div>
                     </div>
                     <div class="blogAside">
