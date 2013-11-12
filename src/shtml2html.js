@@ -7,7 +7,6 @@ var status = ['', ':D', ':(', ':|'];
 var buffer = null;
 
 var log = function(msg, type) {
-    //msg =  msg.replace(process.cwd(), '');
     if (!type) type = 1;
     switch (type) {
         case 1:
@@ -54,8 +53,6 @@ var merge = function(src, dest, wwwroot, save) {
     dest = dest.replace(/.shtml$/i, '.html');
 
     if (fs.existsSync(src)) {
-        // if (fs.existsSync(dest)) {
-        //     file = fs.readFileSync(dest, encoding);
         if (buffer[src]) {
             file = buffer[src];
             result = 2;

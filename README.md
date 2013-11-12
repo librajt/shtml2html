@@ -96,6 +96,10 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 
 Release Log
 ----------
+- ####1.0.3
+2013.11.12  
+Add package.json dependencies.
+
 - ####1.0.2
 2013.11.12  
 Support both single file and the entire folder.
