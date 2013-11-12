@@ -51,12 +51,12 @@ shtml2html -d ../dest
 
 1. process files in the `html` sub folder and output to the `dest/` sub folder:
 ```
-shtml2html -s html -d dest
+shtml2html -s html -d dest/
 ```
 
 1. process files in current folder and output to the `dest/` sibling folder, include files are quote with absolute path and the web root path is `D:\wwwroot`:
 ```
-shtml2html -d ../dest -w "D:\\wwwroot\\blog"
+shtml2html -d ../dest -w "D:\\wwwroot\\blog\\"
 ```
 
 1. process file `a.shtml` in current folder and output to the `dest/` sibling folder, save as its original name:
@@ -71,9 +71,16 @@ shtml2html -s a.shtml -d b.html
 
 The list wording of path are equal in command line, be carefule of the `\` and `/`, especially at the end of a string:
 ```
-../dest
-..\\dest
+../dest/
+..\\dest\\
 ```
+
+and, if the folder name contains spaces, **double quote** is required:
+```
+shtml2html -d "release version"
+```
+
+You should be clear that the destination is eithor **a file name** or **a folder name**, or file(s) will appear in the wrong place. Of course, you can track the folder with the console infomation.
 
 
 
