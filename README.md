@@ -29,7 +29,9 @@ Usage -- command line
 ```
 shtml2html [options]
 ```
-shtml2html can run without any option, in this condition, the program will scan the current folder and process the files, then output them to the new temp folder in the current folder with name start with `_shtml2html_`.
+shtml2html can run without any option.
+
+In this condition, the program will scan the current folder and process the files, then output them to a temp folder in the current folder with name start with `_shtml2html_`.
 
 The available options are:
 ```
@@ -37,7 +39,7 @@ The available options are:
 -V, --version              output the version
 -s, --source [value]       optional, default is current folder
 -d, --destination [value]  optional, default is a temp folder in the source folder
--w, --wwwroot [value]      optional, only required when include files quote with absolute path
+-w, --wwwroot [value]      optional, only required when include files are quoted with absolute path
 ```
 
 
