@@ -80,13 +80,13 @@ and, if the folder name contains spaces, **double quote** is required:
 shtml2html -d "release version"
 ```
 
-You should be clear that the destination is eithor **a file name** or **a folder name**, or file(s) will appear in the wrong place. Of course, you can track the folder with the console infomation.
+You should be clear that the destination is either **a file name** or **a folder name**, or file(s) will appear in the wrong place. Of course, you can track the folder from the console information.
 
 
 
 Usage -- nodejs file
 ----------
-The best example is the `cli.js` source file in the `src` folder. Also, this is a quick start:
+The best example is the `cli.js` source file in the `src` folder. Also, here is a quick start:
 ```
 var shtml2html = require('shtml2html');
 shtml2html(pathFrom, pathTo, pathWwwroot);
@@ -97,17 +97,17 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 Release Log
 ----------
 - ####1.0.2
-2013.11.12
+2013.11.12 
 Support both single file and the entire folder.
 
 - ####1.0.1
-2013.11.07
-Fix Regx. bug.
-Add examples in readme file.
+2013.11.07 
+Fix Regx. bug. 
+Add examples in readme file. 
 
 - ####1.0.0
-2013.11.06
-First release version
+2013.11.06 
+First release version 
 
 
 
