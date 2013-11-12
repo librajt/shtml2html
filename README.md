@@ -11,7 +11,7 @@ That is to say, the code snipe list below will be replaced by the content of fil
 <!--#include virtual="/test/inc/file.shtml"-->
 ```
 
-Both **Single File** and **All Files in the Folder** are supported !
+Both **Single File** and **The Entire Folder** are supported ! Sub folders are not supported.
 
 
 
@@ -99,6 +99,7 @@ Add examples in readme file.
 - ####1.0.0
 2013.11.06
 First release version
+
 
 
 
