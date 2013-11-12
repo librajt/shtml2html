@@ -1,16 +1,2 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>shtml2html test</title>
-</head>
-<body>
-
-<p>next is a include file: </p>
-<!--#include virtual="/shtml2html/test/inc/file.shtml"-->
-
-<p>next is a include file: </p>
-<!--#include virtual="/shtml2html/test/inc/file.shtml" -->
-
-</body>
-</html>
+<!--#include virtual="/shtml2html/test/inc/file1.shtml"-->
+<!--#include virtual="/shtml2html/test/inc/file2.shtml" -->

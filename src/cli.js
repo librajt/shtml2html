@@ -11,8 +11,8 @@ program
     .option('-w, --wwwroot [value]', 'optional, only needed when have to find include files refer with absolute path')
     .parse(process.argv);
 
-var source = program.source || './',
-    destination = program.destination || './_shtml2html_' + (+new Date()).toString().substring(7) + '/',
+var source = program.source,
+    destination = program.destination,
     wwwroot = program.wwwroot;
 
 shtml2html(source, destination, wwwroot);

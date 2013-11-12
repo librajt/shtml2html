@@ -2,6 +2,7 @@ shtml2html
 ==========
 [![NPM version](https://badge.fury.io/js/shtml2html.png)](http://badge.fury.io/js/shtml2html)
 shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/shtml2html/test/inc/file.shtml"-->` will be replaced by the content of file `inc/file.shtml`.
+Both single file and files in the entire directory are supported !
 
 Install
 ----------
@@ -32,14 +33,24 @@ e.g.1. handle files in current directory and output to the `dest` sibling folder
 shtml2html -d ../dest
 ```
 
-e.g.2. handle file in the `html` sub directory and output to the `dest` folder:
+e.g.2. handle files in the `html` sub directory and output to the `dest` folder:
 ```
 shtml2html -s html -d dest
 ```
 
-e.g.3. handle file in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
+e.g.3. handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
 ```
 shtml2html -d ../dest -w "D:\\wwwroot\\blog"
+```
+
+e.g.4. handle file `a.shtml` in current directory and output to the `dest` sibling folder:
+```
+shtml2html -s a.shtml -d ../dest
+```
+
+e.g.5. handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
+```
+shtml2html -s a.shtml -d b.html
 ```
 
 The list typo of path in command line are equal, but be carefule of the `\` and `/`
@@ -59,8 +70,16 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 
 Release Log
 ----------
-###1.0.0 - 2013.11.6
+###1.0.2 - 2013.11.12
+Support both single file and entire directory.
+
+###1.0.1 - 2013.11.07
+Fix Regx. bug.
+Add examples in readme file.
+
+###1.0.0 - 2013.11.06
 First release version
+
 
 Links
 ----------

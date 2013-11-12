@@ -4,9 +4,10 @@
 var encoding = 'binary';
 var ROOT = process.cwd() + '/';
 var status = ['', ':D', ':(', ':|'];
+var buffer = null;
 
 var log = function(msg, type) {
-    msg =  msg.replace(process.cwd(), '');
+    //msg =  msg.replace(process.cwd(), '');
     if (!type) type = 1;
     switch (type) {
         case 1:
@@ -19,11 +20,11 @@ var log = function(msg, type) {
             msg = '\x1B[33m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
             break;
     }
-    console.log(msg);
+    console.log(msg.replace(/\\/g, '/'));
 };
 
 var mkdir = function(dest) {
-    var destDirs = dest.split('\\'),
+    var destDirs = dest.split(/[\\/]/),
         destDirsLen = destDirs.length,
         destDir = '';
 
@@ -33,7 +34,7 @@ var mkdir = function(dest) {
                 destDir += dir + '/';
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir);
-                    log('[mkdir] ' + path.resolve(destDir) + '');
+                    log('[mkdir] ' + destDir + '');
                 }
             }
         });
@@ -46,25 +47,25 @@ var fixPath = function(src) {
 };
 
 
-var merge = function(src, dest, wwwroot) {
+var merge = function(src, dest, wwwroot, save) {
     var baseSrc = path.dirname(src) + '/', 
         baseDest = path.dirname(dest) + '/', 
-        file, 
-        incs, result;
+        file, incs, result;
     dest = dest.replace(/.shtml$/i, '.html');
 
     if (fs.existsSync(src)) {
-        if (fs.existsSync(dest)) {
-            file = fs.readFileSync(dest, encoding);
+        // if (fs.existsSync(dest)) {
+        //     file = fs.readFileSync(dest, encoding);
+        if (buffer[src]) {
+            file = buffer[src];
             result = 2;
         }
         else {
-            file = fs.readFileSync(src, encoding), 
+            file = fs.readFileSync(src, encoding);
+
             incs = file.match(/<!--#include.+"\s*-->/ig) || [];
-            
             incs.forEach(function(inc, i) {
-                var incFile = inc.match(/"(.+)"\s*-->/i)[1],
-                    replacement, incSrc, incDest;
+                var incFile = inc.match(/"(.+)"\s*-->/i)[1], replacement, incSrc, incDest;
                 
                 if (incFile.charAt(0) === '/') {
                     if (wwwroot === undefined) {
@@ -73,13 +74,13 @@ var merge = function(src, dest, wwwroot) {
                         return;
                     }
                     incSrc = path.resolve(wwwroot + incFile);
-                    incDest = path.resolve(wwwroot + incFile);
+                    incDest = baseDest + incSrc.replace(process.cwd() + '\\', '');
                 }
                 else {
-                    incSrc = path.resolve(baseSrc + incFile);
-                    incDest = path.resolve(baseDest + incFile);
+                    incSrc = baseSrc + incFile;
+                    incDest = baseDest + incFile;
                 }
-                replacement = merge(incSrc, incDest, wwwroot);
+                replacement = merge(incSrc, incDest, wwwroot, false);
 
                 if (replacement === undefined) {
                     result = 2;
@@ -90,14 +91,20 @@ var merge = function(src, dest, wwwroot) {
                 }
             });
 
-            mkdir(dest);
-            fs.writeFileSync(dest, file, encoding);
-            log(dest, result);
+            if (save) {
+                mkdir(dest);
+                fs.writeFileSync(dest, file, encoding);
+                log(dest, result);
+            }
+            else {
+                buffer[dest] = file;
+            }
         }
     }
     else {
         result = 3;
         log('file ' + src + ' not found', result);
+
     }
 
     return file;
@@ -105,20 +112,33 @@ var merge = function(src, dest, wwwroot) {
 
 
 var shtml2html = function(from, to, wwwroot) {
-    from = fixPath(from);
-    to = fixPath(to);
+    from = from || './';
+    to = to || './_shtml2html_' + (+new Date()).toString().substring(6) + '/';
     wwwroot = fixPath(wwwroot);
+    buffer = {};
 
-    var files = fs.readdirSync(from);
-    files.forEach(function(src, i) {
-        if (path.extname(src) !== '.shtml') return;
-        fileSrc = path.resolve(ROOT + from + src);
-        fileDest = path.resolve(ROOT + to + src);
-        if (fs.statSync(fileSrc).isFile()) {
-            merge(fileSrc, fileDest, wwwroot);
+    if (fs.statSync(from).isFile()) {
+        if (!path.extname(to)) {
+            to = fixPath(to) + from;
         }
-    });
-    log('Done!')
+        merge(from, to, wwwroot, true);
+    }
+    else if (fs.statSync(from).isDirectory()) {
+        from = fixPath(from);
+        to = fixPath(to);
+
+        var files = fs.readdirSync(from);
+        files.forEach(function(src, i) {
+            fileSrc = from + src;
+            fileDest = to + src;
+            if (fs.statSync(fileSrc).isFile()) {
+                if (path.extname(src) !== '.shtml') return;
+                merge(fileSrc, fileDest, wwwroot, true);
+            }
+        });
+    }
+    log('Done!');
+    buffer = null;
 };
 
 

@@ -1,0 +1,2 @@
+file2
+<!--#include file="file3.shtml"--><from file2>
