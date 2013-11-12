@@ -30,27 +30,28 @@ The available options are:
 -w, --wwwroot [value]      optional, only needed when have to find include files refer with absolute path
 ```
 
-e.g.1. handle files in current directory and output to the `dest` sibling folder:
+####Examples
+l handle files in current directory and output to the `dest` sibling folder:
 ```
 shtml2html -d ../dest
 ```
 
-e.g.2. handle files in the `html` sub directory and output to the `dest` folder:
+l handle files in the `html` sub directory and output to the `dest` folder:
 ```
 shtml2html -s html -d dest
 ```
 
-e.g.3. handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
+l handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
 ```
 shtml2html -d ../dest -w "D:\\wwwroot\\blog"
 ```
 
-e.g.4. handle file `a.shtml` in current directory and output to the `dest` sibling folder:
+l handle file `a.shtml` in current directory and output to the `dest` sibling folder:
 ```
 shtml2html -s a.shtml -d ../dest
 ```
 
-e.g.5. handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
+l handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
 ```
 shtml2html -s a.shtml -d b.html
 ```
