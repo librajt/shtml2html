@@ -69,7 +69,7 @@ shtml2html -s a.shtml -d ../dest
 shtml2html -s a.shtml -d b.html
 ```
 
-The list typo of path in command line are equal, but be carefule of the `\` and `/`
+The list wording of path are equal in command line, be carefule of the `\` and `/`, especially at the end of a string:
 ```
 ../dest
 ..\\dest
