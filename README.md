@@ -5,9 +5,9 @@ shtml2html
 
 shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. 
 
-That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/shtml2html/test/inc/file.shtml"-->` will be replaced by the content of file `inc/file.shtml`.
+That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/test/inc/file.shtml"-->` will be replaced by the content of file `file.shtml`.
 
-Both single file and files in the entire directory are supported !
+Both _single file_ and _files in the entire folder_ are supported !
 
 
 
@@ -25,40 +25,40 @@ Usage -- command line
 ```
 shtml2html [options]
 ```
-shtml2html can run without any option, in this condition, the program will scan the current directory and handle the files, then output them to the new temp folder in the current directory with name start `_shtml2html_`.
+shtml2html can run without any option, in this condition, the program will scan the current folder and process the files, then output them to the new temp folder in the current folder with name start with `_shtml2html_`.
 
 The available options are:
 ```
 -h, --help                 output usage information
--V, --version              output the version number
--s, --source [value]       optional, default is current directory
--d, --destination [value]  optional, default is a temp directory in the source directory
--w, --wwwroot [value]      optional, only needed when have to find include files refer with absolute path
+-V, --version              output the version
+-s, --source [value]       optional, default is current folder
+-d, --destination [value]  optional, default is a temp folder in the source folder
+-w, --wwwroot [value]      optional, only required when include files quote with absolute path
 ```
 
 
 ####Examples
-1. handle files in current directory and output to the `dest` sibling folder:
+1. process files in current folder and output to the `dest/` sibling folder:
 ```
 shtml2html -d ../dest
 ```
 
-1. handle files in the `html` sub directory and output to the `dest` folder:
+1. process files in the `html` sub folder and output to the `dest/` sub folder:
 ```
 shtml2html -s html -d dest
 ```
 
-1. handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
+1. process files in current folder and output to the `dest/` sibling folder, include files are quote with absolute path and the web root path is `D:\wwwroot`:
 ```
 shtml2html -d ../dest -w "D:\\wwwroot\\blog"
 ```
 
-1. handle file `a.shtml` in current directory and output to the `dest` sibling folder:
+1. process file `a.shtml` in current folder and output to the `dest/` sibling folder, save as its original name:
 ```
 shtml2html -s a.shtml -d ../dest
 ```
 
-1. handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
+1. process file `a.shtml` in current folder and output to the current folder, save as `b.html`:
 ```
 shtml2html -s a.shtml -d b.html
 ```
@@ -73,7 +73,7 @@ The list typo of path in command line are equal, but be carefule of the `\` and 
 
 Usage -- nodejs file
 ----------
-The best example is the `cli.js` source file in the `src` directory. Also, this is a quick start:
+The best example is the `cli.js` source file in the `src` folder. Also, this is a quick start:
 ```
 var shtml2html = require('shtml2html');
 shtml2html(pathFrom, pathTo, pathWwwroot);
@@ -85,7 +85,7 @@ Release Log
 ----------
 - ####1.0.2
 2013.11.12
-Support both single file and entire directory.
+Support both single file and the entire folder.
 
 - ####1.0.1
 2013.11.07
