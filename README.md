@@ -5,9 +5,13 @@ shtml2html
 
 shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. 
 
-That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/test/inc/file.shtml"-->` will be replaced by the content of file `file.shtml`.
+That is to say, the code snipe list below will be replaced by the content of file `file.shtml`:
+```
+<!--#include file="inc/file.shtml"-->
+<!--#include virtual="/test/inc/file.shtml"-->
+```
 
-Both _single file_ and _files in the entire folder_ are supported !
+Both *single file* and *files in the entire folder* are supported !
 
 
 
