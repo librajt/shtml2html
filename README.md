@@ -97,17 +97,17 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 Release Log
 ----------
 - ####1.0.2
-2013.11.12 
+2013.11.12  
 Support both single file and the entire folder.
 
 - ####1.0.1
-2013.11.07 
-Fix Regx. bug. 
-Add examples in readme file. 
+2013.11.07  
+Fix Regx. bug.  
+Add examples in readme file.
 
 - ####1.0.0
-2013.11.06 
-First release version 
+2013.11.06  
+First release version
 
 
 
