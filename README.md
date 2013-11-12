@@ -3,8 +3,13 @@ shtml2html
 [![NPM version](https://badge.fury.io/js/shtml2html.png)](http://badge.fury.io/js/shtml2html)
 
 
-shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/shtml2html/test/inc/file.shtml"-->` will be replaced by the content of file `inc/file.shtml`.
+shtml2html is a HTML parser tool that will make include shtml files inline and save as html files. 
+
+That is to say, the inline code `<!--#include file="inc/file.shtml"-->` or `<!--#include virtual="/shtml2html/test/inc/file.shtml"-->` will be replaced by the content of file `inc/file.shtml`.
+
 Both single file and files in the entire directory are supported !
+
+
 
 Install
 ----------
@@ -12,6 +17,7 @@ Install module with npm:
 ```
 npm install shtml2html -g
 ```
+
 
 
 Usage -- command line
@@ -29,6 +35,7 @@ The available options are:
 -d, --destination [value]  optional, default is a temp directory in the source directory
 -w, --wwwroot [value]      optional, only needed when have to find include files refer with absolute path
 ```
+
 
 ####Examples
 1. handle files in current directory and output to the `dest` sibling folder:
@@ -62,7 +69,9 @@ The list typo of path in command line are equal, but be carefule of the `\` and 
 ..\\dest
 ```
 
-Usage -- nodejs file  // TODO
+
+
+Usage -- nodejs file
 ----------
 The best example is the `cli.js` source file in the `src` directory. Also, this is a quick start:
 ```
@@ -71,17 +80,22 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 ```
 
 
+
 Release Log
 ----------
-- ####1.0.2 - 2013.11.12
+- ####1.0.2
+2013.11.12
 Support both single file and entire directory.
 
-- ####1.0.1 - 2013.11.07
+- ####1.0.1
+2013.11.07
 Fix Regx. bug.
 Add examples in readme file.
 
-- ####1.0.0 - 2013.11.06
+- ####1.0.0
+2013.11.06
 First release version
+
 
 
 Links
