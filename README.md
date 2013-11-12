@@ -31,27 +31,27 @@ The available options are:
 ```
 
 ####Examples
-l handle files in current directory and output to the `dest` sibling folder:
+1. handle files in current directory and output to the `dest` sibling folder:
 ```
 shtml2html -d ../dest
 ```
 
-l handle files in the `html` sub directory and output to the `dest` folder:
+1. handle files in the `html` sub directory and output to the `dest` folder:
 ```
 shtml2html -s html -d dest
 ```
 
-l handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
+1. handle files in current directory and output to the `dest` sibling folder, include files are refre with absolute path and the web root path is `D:\wwwroot`:
 ```
 shtml2html -d ../dest -w "D:\\wwwroot\\blog"
 ```
 
-l handle file `a.shtml` in current directory and output to the `dest` sibling folder:
+1. handle file `a.shtml` in current directory and output to the `dest` sibling folder:
 ```
 shtml2html -s a.shtml -d ../dest
 ```
 
-l handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
+1. handle file `a.shtml` in current directory and output to the current directory, save as `b.html`:
 ```
 shtml2html -s a.shtml -d b.html
 ```
@@ -73,14 +73,14 @@ shtml2html(pathFrom, pathTo, pathWwwroot);
 
 Release Log
 ----------
-###1.0.2 - 2013.11.12
+- ####1.0.2 - 2013.11.12
 Support both single file and entire directory.
 
-###1.0.1 - 2013.11.07
+- ####1.0.1 - 2013.11.07
 Fix Regx. bug.
 Add examples in readme file.
 
-###1.0.0 - 2013.11.06
+- ####1.0.0 - 2013.11.06
 First release version
 
 
