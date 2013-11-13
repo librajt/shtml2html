@@ -1,0 +1,3 @@
+<!--#include file="inc/file.shtml"-->
+<!--#include file="inc/file1.shtml" -->
+<!--#include file="inc/file2.shtml"-->

@@ -3,24 +3,9 @@
 
 var encoding = 'binary';
 var ROOT = process.cwd() + '/';
-var status = ['', ':D', ':(', ':|'];
 var buffer = null;
-
-var log = function(msg, type) {
-    if (!type) type = 1;
-    switch (type) {
-        case 1:
-            msg = '\x1B[32m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
-            break;
-        case 2:
-            msg = '\x1B[31m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
-            break;
-        case 3:
-            msg = '\x1B[33m' + '[' + status[type] + '] ' + msg + '\x1B[39m';
-            break;
-    }
-    console.log(msg.replace(/\\/g, '/'));
-};
+var msgs = [];
+var types = ['success', 'fail', 'warn'];
 
 var mkdir = function(dest) {
     var destDirs = dest.split(/[\\/]/),
@@ -33,7 +18,7 @@ var mkdir = function(dest) {
                 destDir += dir + '/';
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir);
-                    log('[mkdir] ' + destDir + '');
+                    msgs.push({msg: '[mkdir] ' + destDir + ''});
                 }
             }
         });
@@ -49,13 +34,13 @@ var fixPath = function(src) {
 var merge = function(src, dest, wwwroot, save) {
     var baseSrc = path.dirname(src) + '/', 
         baseDest = path.dirname(dest) + '/', 
-        file, incs, result;
+        file, incs,
+        result = 0;
     dest = dest.replace(/.shtml$/i, '.html');
 
     if (fs.existsSync(src)) {
         if (buffer[src]) {
             file = buffer[src];
-            result = 2;
         }
         else {
             file = fs.readFileSync(src, encoding);
@@ -66,12 +51,14 @@ var merge = function(src, dest, wwwroot, save) {
                 
                 if (incFile.charAt(0) === '/') {
                     if (wwwroot === undefined) {
-                        log('need <--wwwroot> to find file ' + incFile, 3);
-                        result = 2;
+                        msgs.push({msg: 'require <--wwwroot> to find file ' + incFile, type: types[2]});
+                        result = 1;
                         return;
                     }
-                    incSrc = path.resolve(wwwroot + incFile);
-                    incDest = baseDest + incSrc.replace(process.cwd() + '\\', '');
+                    else {
+                        incSrc = path.resolve(wwwroot + incFile);
+                        incDest = baseDest + incSrc.replace(process.cwd() + '\\', '');
+                    }
                 }
                 else {
                     incSrc = baseSrc + incFile;
@@ -80,18 +67,19 @@ var merge = function(src, dest, wwwroot, save) {
                 replacement = merge(incSrc, incDest, wwwroot, false);
 
                 if (replacement === undefined) {
-                    result = 2;
+                    result = 1;
                 }
                 else {
-                    result = 1;
                     file = file.replace(inc, replacement);
                 }
             });
 
             if (save) {
-                mkdir(dest);
-                fs.writeFileSync(dest, file, encoding);
-                log(dest, result);
+                if (result === 0) {
+                    mkdir(dest);
+                    fs.writeFileSync(dest, file, encoding);
+                }
+                msgs.push({msg: dest, type: types[result]});
             }
             else {
                 buffer[dest] = file;
@@ -99,16 +87,14 @@ var merge = function(src, dest, wwwroot, save) {
         }
     }
     else {
-        result = 3;
-        log('file ' + src + ' not found', result);
-
+        msgs.push({msg: 'file ' + src + ' not found', type: types[1]});
     }
 
     return file;
 };
 
 
-var shtml2html = function(from, to, wwwroot) {
+var shtml2html = function(from, to, wwwroot, callback) {
     from = from || './';
     to = to || './_shtml2html_' + (+new Date()).toString().substring(6) + '/';
     wwwroot = fixPath(wwwroot);
@@ -134,8 +120,10 @@ var shtml2html = function(from, to, wwwroot) {
             }
         });
     }
-    log('Done!');
+    callback(msgs);
+
     buffer = null;
+    msgs = [];
 };
 
 
