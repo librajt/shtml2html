@@ -89,13 +89,24 @@ Usage -- nodejs file
 The best example is the `cli.js` source file in the `src` folder. Also, here is a quick start:
 ```
 var shtml2html = require('shtml2html');
-shtml2html(pathFrom, pathTo, pathWwwroot);
+shtml2html(pathFrom, pathTo, pathWwwroot, callback);
 ```
 
+The `callback` is a function that process the result infomations with an array with data structure
+```
+[
+    {"msg" : "infomation text", "type": "infomation type"}
+]
+```
+Infomation type can be one of the child of the array **["success", "fail", "warn"]**.
 
 
 Release Log
 ----------
+- ####1.0.4
+2013.11.13  
+Extend nodejs file usage.
+
 - ####1.0.3
 2013.11.12  
 Add package.json dependencies.
