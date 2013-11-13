@@ -1,6 +1,6 @@
 {
   "name": "shtml2html",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "shtml2html is a HTML parser tool that will make include shtml files inline and save as html files.",
   "main": "./src/shtml2html.js",
   "scripts": {

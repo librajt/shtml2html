@@ -7,8 +7,8 @@ shtml2html is a HTML parser tool that will make include shtml files inline and s
 
 That is to say, the code snipe list below will be replaced by the content of file `file.shtml`:
 ```
-<!--#include file="inc/file.shtml"-->
-<!--#include virtual="/test/inc/file.shtml"-->
+<!--#include file="inc/file.shtml" -->
+<!--#include virtual="/test/inc/file.shtml" -->
 ```
 
 Both **Single File** and **The Entire Folder** are supported ! Sub folders are not supported.
@@ -103,6 +103,10 @@ Infomation type can be one of the child of the array **["success", "fail", "warn
 
 Release Log
 ----------
+- ####1.0.5
+2013.11.13  
+Fix RegExp. bug. Compatible with non-standard wording.  
+
 - ####1.0.4
 2013.11.13  
 Extend nodejs file usage.
@@ -117,7 +121,7 @@ Support both single file and the entire folder.
 
 - ####1.0.1
 2013.11.07  
-Fix Regx. bug.  
+Fix RegExp. bug.  
 Add examples in readme file.
 
 - ####1.0.0

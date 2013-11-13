@@ -45,7 +45,7 @@ var merge = function(src, dest, wwwroot, save) {
         else {
             file = fs.readFileSync(src, encoding);
 
-            incs = file.match(/<!--#include.+"\s*-->/ig) || [];
+            incs = file.match(/<!--\s*#include.+?"\s*-->/ig) || [];
             incs.forEach(function(inc, i) {
                 var incFile = inc.match(/"(.+)"\s*-->/i)[1], replacement, incSrc, incDest;
                 
