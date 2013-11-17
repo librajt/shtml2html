@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index</title>
+<style>
+    .ver .opts{display:none;}
+    .ver:target .opts{display:initial;}
+</style>
+<base target="_blank">
+</head>
+<body>
+<!--##ver-->
+<div class="ver" id="ver">
+    <span class="name">release</span>版本 <a href="#ver" target="_self">切换</a>
+    <span class="opts">
+        【@后端 开发请使用release版本】
+        <label><input type="radio" name="sort" value="_p">dev</label>
+        <label><input type="radio" name="sort" value="p" checked>release</label>
+    </span>
+</div>
+<!--ver##-->
+<h2>Index</h2>
+<ul>
+    <li><a href="p/untitled.shtml">file</a></li><!--交付链接指向p目录，开发中如需查看_p目录，使用上方的版本切换-->
+</ul>
+
+<script>
+    function changeVer(e) {
+        if (e.target.nodeName == 'INPUT') {
+            var h;
+            [].slice.call(document.querySelectorAll('ul a')).forEach(function(el, i){
+                h = el.getAttribute('href');
+                h = h.substring(h.indexOf('/'));
+                el.setAttribute('href', e.target.value + h);
+            })
+            document.querySelector('.ver .name').innerText = e.target.parentNode.innerText;
+        }
+        return false;
+    }
+    document.querySelector('.ver').addEventListener('click', changeVer, false);
+</script>
+</body>
+</html>

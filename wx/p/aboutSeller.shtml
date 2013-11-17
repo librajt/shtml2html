@@ -1,0 +1,24 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="aboutSeller">
+    <div class="wrap sellerWrap">
+        <div class="pic">
+            <div class="img"><img src="http://placehold.it/100x70&text=." alt=""></div>
+        </div>
+        <div class="desc">Buduturry诚信经营10余年，服装质量、售后服务和品牌信誉有口皆碑，请您放心选购！</div>
+        <div class="opts">
+            <div class="opt call"><a href="tel:13800138000" class="btn btnA"><i class="i iG iG_A2"></i><b>拨打电话</b></a></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--#include file="inc/toolbar.shtml"-->
+
+</body>
+</html>

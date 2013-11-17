@@ -1,0 +1,38 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="process">
+    <div class="steps">
+        <div class="wrap stepWrap">
+            <div class="step step1">
+                <div class="sOrder">1</div>
+                <div class="cnt">提交订单</div>
+            </div>
+            <div class="step step2">
+                <div class="sOrder">2</div>
+                <div class="cnt">等待客服联系</div>
+            </div>
+            <div class="step step3 multiple">
+                <div class="sOrder">3</div>
+                <div class="cnt">汇款给商户，备注写明订单号，商户会按照您输入的订单号为您发货</div>
+            </div>
+            <div class="step step4">
+                <div class="sOrder">4</div>
+                <div class="cnt">致电确认收款及发货</div>
+            </div>
+        </div>
+    </div>
+    <div class="opts">
+        <div class="opt call"><a href="tel:13800138000" class="btn btnA"><i class="i iG iG_A2"></i><b>电话咨询</b></a></div>
+    </div>
+</div>
+
+
+
+<!--#include file="inc/toolbar.shtml"-->
+
+</body>
+</html>

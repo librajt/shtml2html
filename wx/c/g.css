@@ -1,0 +1,133 @@
+/* reset */
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal;}
+ul,ol,li{list-style:none;}
+em,i,b{font-style:normal;font-weight:normal;}
+img{border:none;}
+input,img,video{vertical-align:middle;}
+input[type="text"],input[type="password"],input[type="button"],input[type="submit"],button,textarea,select{-webkit-appearance:none;border:0;outline:none;border-radius:0;}
+a{text-decoration:none;}
+body{}
+
+html{background:#000;height:100%;}
+body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
+
+/* tools */
+.wrap:after,
+.cfx:after
+{content:'';display:table;clear:both;}
+
+.sell .main,
+.category .main,
+.filters,
+.process .step,
+.btnA,
+.box{-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.07);-moz-box-shadow:1px 1px 1px rgba(0,0,0,.07);box-shadow:1px 1px 1px rgba(0,0,0,.07);}
+
+/* ico   iG_A1代表global图片中的A行1列图标 */
+.i{width:16px;height:16px;display:inline-block;vertical-align:-3px;background:#CCC;}
+
+.iG{background:url("../i/iGlobal.png") no-repeat;-webkit-background-size:100px auto;background-size:100px auto;width:25px;height:25px;}
+.iG_A1{background-position:0 0;width:20px;height:20px;}
+.iG_A2{background-position:-25px 0;}
+
+.iN{background:url("../i/iNav.png") no-repeat;-webkit-background-size:125px auto;background-size:125px auto;width:25px;height:25px;}
+.iN_A1{background-position:0 0;}
+.iN_A2{background-position:-25px 0;}
+.iN_A3{background-position:-50px 0;}
+.iN_A4{background-position:-75px 0;}
+.iN_A5{background-position:-100px 0;}
+
+/* btn */
+.btn{-webkit-box-sizing:border-box;box-sizing:border-box;text-align:center;}
+
+.btnA{display:block;background:#CD9C71;line-height:50px;color:#FFF;}
+
+/* sel */
+.sel{background:#FFFFFF;display:block;text-align:center;position:relative;}
+.sel select{display:block;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 10px;background-color:transparent;position:relative;z-index:1;}
+.sel:after{content:'';position:absolute;z-index:0;width:16px;height:16px;right:10px;top:50%;margin-top:-8px;background:url("../i/iSel.png") no-repeat;-webkit-background-size:16px auto;background-size:16px auto;}
+
+/* pic */
+.pic_cover{display:table;}
+.pic_cover .img{display:table-cell;vertical-align:middle;text-align:center;}
+
+/* loadMore */
+.loadMore{}
+
+/* toolbar */
+.siteNavs{height:52px;margin-top:20px;}
+.siteNavWrap{position:fixed;z-index:99;left:0;bottom:0;width:100%;min-width:320px;background:#F1F1F1;border-top:1px solid #D9D6CA;}
+.siteNav{width:20%;float:left;}
+.siteNav .btn{display:block;padding:4px 0;font-size:12px;color:#000;text-align:center;}
+.siteNav .btn b{display:block;line-height:18px;}
+.siteNavs .on{background:#DCDCDC;}
+
+/* ---------- home -------- */
+.sellType{margin:0 5px;}
+.sellType h2{line-height:36px;padding-top:5px;font-size:22px;color:#585858;}
+
+.sellList .sell{margin:10px;}
+.sellList .sell .main{display:block;padding:10px;background:#FFFFFF;}
+.sellList .sell .pic{margin:-10px -10px 10px -10px;}
+.sellList .sell .img img{width:100%;}
+.sellList .sell .name{min-height:50px;font-size:22px;color:#585858;}
+.sellList .sell .price{color:#FF7700;overflow:hidden;text-align:right;}
+.sellList .sell .discount{font-size:24px;float:right;margin-left:10px;}
+.sellList .sell .whole{font-size:18px;color:#C4C4C4;padding-top:6px;}
+
+
+/* category */
+.category{margin:10px;}
+.categoryWrap{overflow:hidden;}
+.category .main{display:block;position:relative;background:#FFFFFF;}
+.category .title{padding:20px;font-size:18px;line-height:24px;color:#585858;}
+.category .toDetail{position:absolute;right:20px;top:50%;margin-top:-10px;}
+
+.filters{}
+.filter{width:50%;float:left;}
+.filter select{font-size:18px;color:#585858;text-align:center;height:44px;}
+.filters .orderBy .sel{border-left:1px solid #D4D4D4;}
+
+.sortedList .sell{margin:10px;}
+.sortedList .sell .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;}
+.sortedList .sell .pic{position:absolute;left:0;top:0;width:140px;height:140px;}
+.sortedList .sell .img img{max-width:140px;max-height:140px;}
+.sortedList .sell .name{color:#585858;font-size:18px;}
+.sortedList .sell .price{color:#FF7700;text-align:right;position:absolute;right:10px;bottom:10px;}
+.sortedList .sell .discount{font-size:18px;}
+.sortedList .sell .whole{font-size:15px;color:#C4C4C4;}
+
+
+/* process */
+.process{overflow:hidden;}
+.process .step{margin:10px;position:relative;background:#FFFFFF;padding:10px 10px 10px 65px;line-height:48px;}
+.process .step .sOrder{font-size:24px;color:#FFFFFF;position:absolute;top:10px;left:10px;width:40px;height:48px;text-align:center;background:#CD9C71;}
+.process .multiple .cnt{line-height:24px;font-size:15px;}
+.process .opts{margin:10px;}
+.process .call .btn{font-size:18px;}
+.process .call .btn .i{vertical-align:-6px;margin-right:5px;}
+
+/* seller */
+.aboutSeller{overflow:hidden;}
+.sellerWrap{margin:10px;}
+.aboutSeller .pic img{width:100%;}
+.aboutSeller .desc{padding:10px;font-size:18px;color:#585858;min-height:100px;}
+.aboutSeller .call .btn{font-size:18px;}
+.aboutSeller .call .btn .i{vertical-align:-6px;margin-right:5px;}
+
+/* orders */
+.orderList{overflow:hidden;}
+.orderList .order{margin:10px;}
+.orderList .order .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;font-size:12px;line-height:20px;}
+.orderList .order .pic{position:absolute;left:0;top:0;width:140px;height:140px;background:#CECECE;}
+.orderList .order .img img{max-width:140px;max-height:140px;}
+.orderList .order .date{color:#AAAAAA;font-size:15px;text-align:center;position:absolute;z-index:1;left:0;bottom:0;width:140px;background:rgba(0,0,0,.5);}
+.orderList .order .name,.orderList .order .count,.orderList .order .sid{color:#585858;}
+.orderList .order .name h4{height:20px;overflow:hidden;-ms-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;}
+.orderList .order .price,.order .oid{color:#FF7700;position:absolute;left:150px;}
+.orderList .order .price{bottom:30px;}
+.orderList .order .oid{bottom:10px;}
+.orderList .order .blank{text-align:center;line-height:80px;}
+
