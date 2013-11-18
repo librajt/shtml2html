@@ -18,51 +18,58 @@
         </div>
     </div>
 
-    <div class="info">
+    <div class="ap info">
         <div class="name"><h1>秋冬季新款女装修身款风衣外套</h1></div>
         <div class="sid">商品编号：<b>87164</b></div>
         <div class="price"><b>￥1236</b></div>
     </div>
 
-    <div class="orderForm">
+    <div class="ap orderForm">
         <div class="orderItems">
             <div class="wrap orderItemWrap">
                 <div class="orderItem">
                     <div class="title">颜色</div>
                     <div class="value">
-                        <label class="choice"><input type="radio" name="color" value=""><div class="cnt">黑色</div></label>
-                        <label class="choice"><input type="radio" name="color" value=""><div class="cnt">红色</div></label>
+                        <label class="choice"><input type="radio" name="color" value="b"><div class="cnt">黑色</div></label>
+                        <label class="choice"><input type="radio" name="color" value="r"><div class="cnt">红色</div></label>
                     </div>
                 </div>
                 <div class="orderItem">
                     <div class="title">尺码</div>
                     <div class="value">
-                        <label class="choice"><input type="radio" name="size" value=""><div class="cnt">S</div></label>
-                        <label class="choice"><input type="radio" name="size" value=""><div class="cnt">M</div></label>
-                        <label class="choice"><input type="radio" name="size" value=""><div class="cnt">L</div></label>
-                        <label class="choice"><input type="radio" name="size" value=""><div class="cnt">XL</div></label>
-                        <label class="choice"><input type="radio" name="size" value=""><div class="cnt">XXL</div></label>
+                        <label class="choice"><input type="radio" name="size" value="S"><div class="cnt">S</div></label>
+                        <label class="choice"><input type="radio" name="size" value="M"><div class="cnt">M</div></label>
+                        <label class="choice"><input type="radio" name="size" value="L"><div class="cnt">L</div></label>
+                        <label class="choice"><input type="radio" name="size" value="XL"><div class="cnt">XL</div></label>
+                        <label class="choice"><input type="radio" name="size" value="XXL"><div class="cnt">XXL</div></label>
                     </div>
                 </div>
                 <div class="orderItem">
                     <div class="title">数量</div>
                     <div class="value">
                         <div class="num">
-                            <button class="btn minus"><i class="i iC iC_A1"></i></button>
-                            <input type="text" class="cnt">
-                            <button class="btn plus"><i class="i iC iC_A2"></i></button>
+                            <div class="numWrap">
+                                <button class="btn minus disabled">-</button>
+                                <input type="text" class="cnt">
+                                <button class="btn plus">+</button>
+                            </div>
+                            <div class="des">库存<b>35</b>件</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="opts">
-            <div class="opt"><a href="#3" class="btn btnA"><b>加入购物车</b></a></div>
+            <div class="opt"><a href="#3" class="btn btnA addToCart"><b>加入购物车</b></a></div>
         </div>
     </div>
 
-    <div class="cart">
-        <h3>购物车</h3>
+    <div class="ap cart">
+        <div class="hd">
+            <div class="wrap hdWrap">
+                <h3>购物车</h3>
+            </div>
+        </div>
         <div class="cartList">
             <div class="cartItemWrap">
                 <div class="cartItem">
@@ -72,11 +79,11 @@
         </div>
     </div>
 
-    <div class="sellIntro">
+    <div class="ap sellIntro">
         <div class="hd">
             <div class="wrap hdWrap">
                 <h3>商品详情</h3>
-                <div class="status"><i class="i iG iG_C1"></i></div>
+                <div class="opts"><div class="opt status"></div></div>
             </div>
         </div>
         <div class="bd">
