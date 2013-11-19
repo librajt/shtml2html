@@ -1,0 +1,43 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="payDetail">
+    <div class="cartInfo">
+        <h3>结算信息</h3>
+        <div class="sellList">
+            <div class="wrap sellItemWrap">
+                <div class="sellItem">
+                    <div class="wrap sellItemWrap">
+                        <div class="info">
+                            <div class="it color">红色</div>
+                            <div class="it size">L</div>
+                            <div class="it count">5件</div>
+                        </div>
+                        <div class="price">￥2576</div>
+                    </div>
+                </div>
+                <div class="total">
+                    共需要支付<div class="price">￥2576</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="addressDetail">
+    
+</div>
+
+<div class="orderOpts">
+    <div class="wrap optWrap">
+        <div class="opt goBack"><a href="#3" class="btn btnA"><b>上一步</b></a></div>
+        <div class="opt pay"><a href="#3" class="btn btnB"><b>付款</b></a></div>
+    </div>
+</div>
+
+
+</body>
+</html>
