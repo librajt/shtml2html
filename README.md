@@ -49,12 +49,12 @@ The available options are:
 shtml2html -d ../dest
 ```
 
-1. process files in the `html` sub folder and output to the `dest/` sub folder:
+1. process files in the `html/` sub folder and output to the `dest/` sub folder:
 ```
 shtml2html -s html -d dest/
 ```
 
-1. process files in current folder and output to the `dest/` sibling folder, include files are quote with absolute path and the web root path is `D:\wwwroot`:
+1. process files in current folder and output to the `dest/` sibling folder, include files are quote with absolute path and the web root path is `D:\wwwroot\blog\`:
 ```
 shtml2html -d ../dest -w "D:\\wwwroot\\blog\\"
 ```
@@ -75,9 +75,9 @@ The list wording of path are equal in command line, be carefule of the `\` and `
 ..\\dest\\
 ```
 
-and, if the folder name contains spaces, **double quote** is required:
+and, if the folder or file name contains spaces, **double quote** it:
 ```
-shtml2html -d "release version"
+shtml2html -d "release version/"
 ```
 
 You should be clear that the destination is either **a file name** or **a folder name**, or file(s) will appear in the wrong place. Of course, you can track the folder from the console information.
@@ -98,7 +98,7 @@ The `callback` is a function that process the result infomations with an array w
     {"msg" : "infomation text", "type": "infomation type"}
 ]
 ```
-Infomation type can be one of the child of the array **["success", "fail", "warn"]**.
+Infomation type can be one of the array **["success", "fail", "warn"]**.
 
 
 Release Log
