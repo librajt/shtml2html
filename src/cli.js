@@ -4,7 +4,7 @@ var program = require('commander'),
     shtml2html = require('./shtml2html');
 
 program
-    .version('1.0.4')
+    .version('1.0.5')
     .usage('shtml2html [options]')
     .option('-s, --source [value]', 'optional, default is current folder')
     .option('-d, --destination [value]', 'optional, default is a temp folder in the source folder')
