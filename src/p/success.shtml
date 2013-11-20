@@ -1,0 +1,49 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="paySuccess">
+    <h2>支付成功！</h2>
+    <div class="payInfo">
+        <div class="info result">您的订单已支付成功！</div>
+        <div class="info oid">商品编号：<b>1860798</b></div>
+        <div class="info pay">支付金额：<div class="price">￥2576</div></div>
+    </div>
+    <div class="sellList">
+        <h3>购买数量：</h3>
+        <div class="wrap sellItemWrap">
+            <div class="sellItem">
+                <div class="wrap sellItemWrap">
+                    <div class="info">
+                        <div class="it color">红色</div>
+                        <div class="it size">L</div>
+                        <div class="it count">5件</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sellItem">
+                <div class="wrap sellItemWrap">
+                    <div class="info">
+                        <div class="it color">红色</div>
+                        <div class="it size">L</div>
+                        <div class="it count">5件</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="orderOpts">
+    <div class="wrap optWrap">
+        <div class="opt goHome"><a href="#3" class="btn btnA"><b>回首页</b></a></div>
+        <div class="opt toOrders"><a href="#3" class="btn btnB"><b>查看订单</b></a></div>
+    </div>
+</div>
+
+
+</body>
+</html>

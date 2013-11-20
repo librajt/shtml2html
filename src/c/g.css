@@ -24,6 +24,8 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .filters,
 .process .step,
 .btnA,
+.btnB,
+.btnC,
 .box{-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.07);-moz-box-shadow:1px 1px 1px rgba(0,0,0,.07);box-shadow:1px 1px 1px rgba(0,0,0,.07);}
 
 /* ico   iG_A1代表global图片中的A行1列图标 */
@@ -57,6 +59,7 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 
 .btnA{display:block;background:#CD9C71;line-height:50px;color:#FFF;font-size:18px;}
 .btnB{display:block;background:#FF7700;line-height:50px;color:#FFF;font-size:18px;}
+.btnC{display:block;background:#FFF;line-height:50px;color:#585858;font-size:18px;}
 
 /* sel */
 .sel{background:#FFFFFF;display:block;text-align:center;position:relative;}
@@ -68,6 +71,7 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .pic_cover .img{display:table-cell;vertical-align:middle;text-align:center;}
 
 /* loadMore */
+.loadMore{padding:10px;}
 .loadMore{}
 
 /* toolbar */
@@ -146,6 +150,23 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .orderList .order .blank{text-align:center;line-height:80px;}
 
 /* ---------- detail ---------- */
+/* orderOpts */
+.orderOpts{height:62px;}
+.orderOpts .wrap{border-top:2px solid #D9D6CA;background:#FFFFFF;padding:5px;width:100%;position:fixed;left:0;bottom:0;}
+.orderOpts .opt{width:50%;float:left;}
+.orderOpts .opt .btn{margin:0 5px;}
+.orderOpts .call .btn .i{vertical-align:-6px;margin-right:5px;}
+
+
+/* mw */
+.mw{background:rgba(255,255,255,.9);-webkit-box-sizing:border-box;box-sizing:border-box;width:280px;padding:30px;position:fixed;left:50%;margin-left:-140px;}
+.mw .cnt{font-size:18px;color:#585858;line-height:36px;text-align:center;}
+
+.mw.payResult .cnt b{color:#FF7700;}
+.mw.loading .wait{text-align:center;}
+
+
+/* --public-- */
 .detail{}
 .detail .ap{padding:15px;border-top:1px solid #D9D6CA;}
 .detail .hd h3{float:left;color:#585858;font-size:18px;}
@@ -210,17 +231,35 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .sellList .total{text-align:right;font-size:15px;color:#909090;}
 .sellList .total .price{display:inline-block;margin-left:10px;font-size:24px;color:#FF7700;}
 
-/* orderOpts */
-.orderOpts{border-top:2px solid #D9D6CA;background:#FFFFFF;padding:5px;}
-.orderOpts .opt{width:50%;float:left;}
-.orderOpts .opt .btn{margin:0 5px;}
-.orderOpts .call .btn .i{vertical-align:-6px;margin-right:5px;}
+/* payDetail */
+.payDetail{}
+.payDetail h3{font-size:18px;color:#585858;padding:15px;border-bottom:1px solid #D9D6CA;}
+
+.payDetail .sellItem{padding:15px;border-bottom:1px solid #D9D6CA;}
+.payDetail .sellItem .info{font-size:15px;color:#585858;padding-left:10px;float:left;}
+.payDetail .sellItem .prise{font-size:18px;color:#FF7700;float:right;}
+.payDetail .total{padding:15px;}
+
+/* addressDetail */
+.addressDetail{}
+.addressDetail h3{font-size:18px;color:#585858;padding:15px;border-bottom:1px solid #D9D6CA;}
+.address{display:block;padding:15px;border-bottom:1px solid #D9D6CA;}
+.address .main{padding-left:10px;font-size:15px;color:#585858;line-height:18px;}
+.address input{vertical-align:top;}
+.address .cnt{display:inline;}
+.address .blank{}
 
 
-/* mw */
-.mw{background:rgba(255,255,255,.9);-webkit-box-sizing:border-box;box-sizing:border-box;width:280px;padding:30px;position:fixed;left:50%;margin-left:-140px;}
-.mw .cnt{font-size:18px;color:#585858;line-height:36px;text-align:center;}
+/* paySuccess */
+.paySuccess{}
+.paySuccess h2{padding:15px;border-bottom:1px solid #D9D6CA;font-size:24px;color:#FF7700;}
+.paySuccess .payInfo{padding:15px;border-bottom:1px solid #D9D6CA;}
+.paySuccess .payInfo .info{font-size:15px;color:#585858;line-height:2;}
+.paySuccess .payInfo .price{font-size:18px;color:#FF7700;display:inline-block;}
+.paySuccess .sellList{padding:15px;border-bottom:1px solid #D9D6CA;line-height:2;font-size:15px;}
+.paySuccess .sellList h3{color:#585858;}
+.paySuccess .sellList .sellItem{color:#888888;}
+.paySuccess .sellList .sellItem .it{margin:0 10px 0 0;}
 
-.mw.payResult .cnt b{color:#FF7700;}
-.mw.loading .wait{text-align:center;}
+
 
