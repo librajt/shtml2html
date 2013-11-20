@@ -104,7 +104,7 @@ Infomation type can be one of the array **["success", "fail", "warn"]**.
 Release Log
 ----------
 - ####1.0.5
-2013.11.13  
+2013.11.19  
 Fix RegExp. bug. Compatible with non-standard wording.  
 
 - ####1.0.4
