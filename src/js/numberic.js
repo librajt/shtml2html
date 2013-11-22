@@ -83,25 +83,23 @@ numberic.prototype = {
             _.inputVal.value = _.val;
         }
         else {
-            _.lastVal = _.val;
             _.setVal(_.inputVal.value);
         }
     },
     
     minus: function(v) {
         var _ = this;
-        _.lastVal = _.val;
         this.setVal(_.val - 1);
     },
     
     plus: function() {
         var _ = this;
-        _.lastVal = _.val;
         this.setVal(_.val + 1);
     },
     
     setVal: function(v) {
         var _ = this;
+        _.lastVal = _.val;
         _.val = parseInt(v, 10);
         _.val = _.max < _.val  ? _.max : (_.min > _.val ? _.min : _.val);
 
