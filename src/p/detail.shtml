@@ -7,14 +7,14 @@
 <div class="detail">
     <div class="sellPics">
         <div class="wrap picWrap">
-            <div class="pic"><div class="img"><img src="" alt=""></div></div>
-            <div class="pic"><div class="img"><img src="" alt=""></div></div>
-        </div>
-        <div class="controls">
-            <div class="wrap controlWrap">
-                <div class="control"></div>
-                <div class="control"></div>
-            </div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x300" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x100" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x300" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x100" alt=""></div></div>
         </div>
     </div>
 
@@ -49,11 +49,11 @@
                     <div class="value">
                         <div class="num">
                             <div class="numWrap">
-                                <button class="btn minus disabled"><i class="i iG iG_C1"></i></button>
+                                <button class="btn minus"><i class="i iG iG_C1"></i></button>
                                 <input type="tel" class="cnt">
                                 <button class="btn plus"><i class="i iG iG_C2"></i></button>
                             </div>
-                            <div class="des">库存<b>35</b>件</div>
+                            <div class="des">库存<b>0</b>件</div>
                         </div>
                     </div>
                 </div>
@@ -140,6 +140,34 @@
     <div class="wait"><i class="i iL iL1"></i></div>
 </div>
 
+
+<script>
+$(document).ready(function () {
+    $('.sellPics .picWrap').bxSlider({
+        controls: false,
+        slideWidth: 280,
+        infiniteLoop: false
+    });
+
+    var setNum = new numberic({
+        el: '.num',
+        max: 35,
+        valid: function() {
+            var msg = [];
+            if (!$('.orderItems .color .value input:checked').val()) msg.push('color');
+            if (!$('.orderItems .size .value input:checked').val()) msg.push('size');
+            if (msg.length > 0) {
+                alert(msg.join(', ') + ' required!');
+                return false;
+            }
+            else return true;
+        }
+    });
+    
+});
+    
+</script>
+<style>.mw{display:none;}</style>
 
 </body>
 </html>
