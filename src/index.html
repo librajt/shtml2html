@@ -4,50 +4,20 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Index</title>
-<style>
-    .ver .opts{display:none;}
-    .ver:target .opts{display:initial;}
-</style>
 <base target="_blank">
 </head>
 <body>
-<!--ver-->
-<div class="ver" id="ver">
-    <span class="name">release</span>版本 <a href="#ver" target="_self">切换</a>
-    <span class="opts">
-        【@后端 开发请使用release版本】
-        <label><input type="radio" name="sort" value="shtml">dev</label>
-        <label><input type="radio" name="sort" value="html" checked>release</label>
-    </span>
-</div>
-<!--ver-->
 <h2>Index</h2>
 <ol>
-    <li><a href="html/home.shtml">店铺首页</a></li>
-    <li><a href="html/categoryList.shtml">分类</a></li>
-    <li><a href="html/category.shtml">分类筛选</a></li>
-    <li><a href="html/aboutSeller.shtml">商户介绍</a></li>
-    <li><a href="html/process.shtml">购买须知</a></li>
-    <li><a href="html/orders.shtml">我的定单</a></li>
-    <li><a href="html/detail.shtml">详情</a></li>
-    <li><a href="html/confirm.shtml">确认定单</a></li>
-    <li><a href="html/success.shtml">支付成功</a></li>
+    <li><a href="html/home.html">店铺首页</a></li>
+    <li><a href="html/categoryList.html">分类</a></li>
+    <li><a href="html/category.html">分类筛选</a></li>
+    <li><a href="html/aboutSeller.html">商户介绍</a></li>
+    <li><a href="html/process.html">购买须知</a></li>
+    <li><a href="html/orders.html">我的定单</a></li>
+    <li><a href="html/detail.html">详情</a></li>
+    <li><a href="html/confirm.html">确认定单</a></li>
+    <li><a href="html/success.html">支付成功</a></li>
 </ol>
-
-<script>
-    function changeVer(e) {
-        if (e.target.nodeName == 'INPUT') {
-            var h;
-            [].slice.call(document.querySelectorAll('ol a')).forEach(function(el, i){
-                h = el.getAttribute('href');
-                h = h.substring(h.indexOf('/'));
-                el.setAttribute('href', e.target.value + h);
-            })
-            document.querySelector('.ver .name').innerText = e.target.parentNode.innerText;
-        }
-        return false;
-    }
-    document.querySelector('.ver').addEventListener('click', changeVer, false);
-</script>
 </body>
 </html>
