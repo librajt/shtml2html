@@ -23,9 +23,7 @@
     </div>
 </div>
 
-<div class="loadMore">
-    <div class="status init"><a href="#3" class="btn btnA">加载更多商品</a></div>
-</div>
+<!--#include file="inc/loadMore.shtml"-->
 
 <!--#include file="inc/toolbar.shtml"-->
 
