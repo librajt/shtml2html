@@ -10,101 +10,101 @@
  *  
  */
 var numberic = function(args) {
-    var _ = this;
+    var me = this;
     args = args || {};
     for (var o in args) {
-        _[o] = args[o];
+        me[o] = args[o];
     }
     
-    _.el = document.querySelector(_.el);
-    if (_.el) _.init();
+    me.el = document.querySelector(me.el);
+    if (me.el) me.init();
 };
 
 numberic.prototype = {
     init: function() {
-        var _ = this;
+        var me = this;
         
-        _.btnMinus = _.el.querySelector('.minus');
-        _.btnPlus = _.el.querySelector('.plus');
-        _.inputVal = _.el.querySelector('.cnt');
-        _.desVal = _.el.querySelector('.des b');
+        me.btnMinus = me.el.querySelector('.minus');
+        me.btnPlus = me.el.querySelector('.plus');
+        me.inputVal = me.el.querySelector('.cnt');
+        me.desVal = me.el.querySelector('.des b');
         
-        _.lastVal = 0;
+        me.lastVal = 0;
         
-        _.val = _.val || 0;
-        _.min = _.min || 0;
-        _.max = _.max || 0;
-        _.valid = _.valid || function() {return true;};
+        me.val = me.val || 0;
+        me.min = me.min || 0;
+        me.max = me.max || 0;
+        me.valid = me.valid || function() {return true;};
         
-        _.setVal(_.val);
-        _.setDesVal(_.max);
+        me.setVal(me.val);
+        me.setDesVal(me.max);
 
-        _.btnMinus.addEventListener('click', function(e) {
-            _.onMinusClick(e);
+        me.btnMinus.addEventListener('click', function(e) {
+            me.onMinusClick(e);
         }, false);
-        _.btnPlus.addEventListener('click', function(e) {
-            _.onPlusClick(e);
+        me.btnPlus.addEventListener('click', function(e) {
+            me.onPlusClick(e);
         }, false);
-        _.inputVal.addEventListener('focus', function(e) {
-            _.onInputFocus(e);
+        me.inputVal.addEventListener('focus', function(e) {
+            me.onInputFocus(e);
         }, false);
-        _.inputVal.addEventListener('blur', function(e) {
-            _.onInputBlur(e);
+        me.inputVal.addEventListener('blur', function(e) {
+            me.onInputBlur(e);
         }, false);
     },
     
     onMinusClick: function(e) {
-        var _ = this;
-        if (_.valid()) {
-            if (_.btnMinus.className.match(/disable/g)) return false;
-            _.minus();
+        var me = this;
+        if (me.valid()) {
+            if (me.btnMinus.className.match(/disable/g)) return false;
+            me.minus();
         }
     },
     
     onPlusClick: function(e) {
-        var _ = this;
-        if (_.valid()) {
-            if (_.btnPlus.className.match(/disable/g)) return false;
-            _.plus();
+        var me = this;
+        if (me.valid()) {
+            if (me.btnPlus.className.match(/disable/g)) return false;
+            me.plus();
         }
     },
     
     onInputFocus: function(e) {
-        var _ = this;
-        if (!_.valid()) {
+        var me = this;
+        if (!me.valid()) {
             e.target.blur();
         }
     },
     
     onInputBlur: function(e) {
-        var _ = this, val = _.inputVal.value;
+        var me = this, val = me.inputVal.value;
         if (/\D/.test(val)) {
             alert('请输入整数');
-            _.inputVal.value = _.val;
+            me.inputVal.value = me.val;
         }
         else {
-            _.setVal(_.inputVal.value);
+            me.setVal(me.inputVal.value);
         }
     },
     
     minus: function(v) {
-        var _ = this;
-        this.setVal(_.val - 1);
+        var me = this;
+        me.setVal(me.val - 1);
     },
     
     plus: function() {
-        var _ = this;
-        this.setVal(_.val + 1);
+        var me = this;
+        me.setVal(me.val + 1);
     },
     
     setVal: function(v) {
-        var _ = this;
-        _.lastVal = _.val;
-        _.val = parseInt(v, 10);
-        _.val = _.max < _.val  ? _.max : (_.min > _.val ? _.min : _.val);
+        var me = this;
+        me.lastVal = me.val;
+        me.val = parseInt(v, 10);
+        me.val = me.max < me.val  ? me.max : (me.min > me.val ? me.min : me.val);
 
-        _.inputVal.value = _.val;
-        _.checkEnable();
+        me.inputVal.value = me.val;
+        me.checkEnable();
     },
     
     setDesVal: function(v) {
@@ -112,22 +112,22 @@ numberic.prototype = {
     },
     
     checkEnable: function() {
-        var _ = this;
-        if (_.val <= _.min) _.btnMinus.className = 'btn minus disable';
-        else _.btnMinus.className = 'btn minus';
+        var me = this;
+        if (me.val <= me.min) me.btnMinus.className = 'btn minus disable';
+        else me.btnMinus.className = 'btn minus';
 
-        if (_.val >= _.max) _.btnPlus.className = 'btn plus disable';
-        else _.btnPlus.className = 'btn plus';
+        if (me.val >= me.max) me.btnPlus.className = 'btn plus disable';
+        else me.btnPlus.className = 'btn plus';
     },
     
     update: function(max) {
-        var _ = this;
-        _.max = max;
-        _.lastVal = 0;
-        _.val = 0;
+        var me = this;
+        me.max = max;
+        me.lastVal = 0;
+        me.val = 0;
 
-        _.setVal(_.val);
-        _.setDesVal(_.max);
+        me.setVal(me.val);
+        me.setDesVal(me.max);
     }
 };
 

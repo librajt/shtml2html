@@ -4,7 +4,7 @@ var compressor = require('node-minify');
 new compressor.minify({
     type: 'gcc',
     language: 'ECMASCRIPT5',
-    fileIn: ['jquery-2.0.3.min.js', 'jquery.bxslider.min.js', 'numberic.js', 'loadmore.js'],
+    fileIn: ['jquery-2.0.3.min.js', 'jquery.bxslider.min.js', 'underscore-1.5.2.js', 'template.js', 'numberic.js', 'loadmore.js'],
     fileOut: 'all.min.js',
     callback: function(err, min){
         console.log('GCC jquery 2.0');

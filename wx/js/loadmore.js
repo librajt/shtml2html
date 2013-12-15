@@ -8,38 +8,55 @@
  *  
  */
 var loadmore = function(args) {
-    var _ = this;
+    var me = this;
     args = args || {};
     for (var o in args) {
-        _[o] = args[o];
+        me[o] = args[o];
     }
     
-    _.el = document.querySelector(_.el);
-    if (_.el) _.init();
+    me.el = document.querySelector(me.el);
+    if (me.el) me.init();
 };
 
 loadmore.prototype = {
     init: function() {
-        var _ = this;
+        var me = this;
         
-
-        _.btnMinus.addEventListener('click', function(e) {
-            _.onMinusClick(e);
+        me.page = 2;
+        
+        me.el.addEventListener('click', function(e) {
+            me.onClick(e);
         }, false);
     },
     
-    onMinusClick: function(e) {
-        var _ = this;
-        if (_.valid()) {
-            if (_.btnMinus.className.match(/disable/g)) return false;
-            _.minus();
-        }
+    onClick: function(e) {
+        var me = this;
+        
+        me.loadData(me.page + 1);
     },
     
-    minus: function(v) {
-        var _ = this;
-        this.setVal(_.val - 1);
+    loadData: function(p) {
+        var me = this;
+        $.ajax({
+            type: "GET",
+            url: url,
+            data: data,
+            success: function(data) {
+                _.template(TEMPLATES.home.loadmore, data);
+            },
+            dataType: 'json'
+        });
     }
     
 };
+
+
+
+
+
+
+
+
+
+
 
