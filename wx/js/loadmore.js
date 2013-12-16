@@ -3,6 +3,7 @@
  *  args: {
  *      el: 'css selector'
  *      page: number
+ *      fn: function
  *  }
  *  
  *  
@@ -42,7 +43,8 @@ loadmore.prototype = {
             url: url,
             data: data,
             success: function(data) {
-                _.template(TEMPLATES.home.loadmore, data);
+                //_.template(TEMPLATES.home.loadmore, data);
+                _.fn(TEMPLATES.home.loadmore, data);
             },
             dataType: 'json'
         });
