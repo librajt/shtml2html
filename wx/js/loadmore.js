@@ -2,13 +2,16 @@
  *  
  *  args: {
  *      el: 'css selector'
+ *      url: string
+ *      data: {}
  *      page: number
- *      fn: function
+ *      maxPage: number
+ *      successFn: function
  *  }
  *  
  *  
  */
-var loadmore = function(args) {
+var Loadmore = function(args) {
     var me = this;
     args = args || {};
     for (var o in args) {
@@ -19,11 +22,11 @@ var loadmore = function(args) {
     if (me.el) me.init();
 };
 
-loadmore.prototype = {
+Loadmore.prototype = {
     init: function() {
         var me = this;
         
-        me.page = 2;
+        me.page = me.page || 2;
         
         me.el.addEventListener('click', function(e) {
             me.onClick(e);
@@ -33,18 +36,26 @@ loadmore.prototype = {
     onClick: function(e) {
         var me = this;
         
-        me.loadData(me.page + 1);
+        me.loadData();
     },
     
     loadData: function(p) {
         var me = this;
         $.ajax({
             type: "GET",
-            url: url,
-            data: data,
-            success: function(data) {
-                //_.template(TEMPLATES.home.loadmore, data);
-                _.fn(TEMPLATES.home.loadmore, data);
+            url: me.url,
+            data: me.data,
+            success: function(response) {
+                if (response.status === 1) {
+                    me.successFn(response.data);
+                    me.page += 1;
+                    if (me.page >= me.maxPage) {
+                        // TODO
+                    }
+                }
+                else {
+                    // error
+                }
             },
             dataType: 'json'
         });

@@ -9,7 +9,7 @@
  *  update(max)
  *  
  */
-var numberic = function(args) {
+var Numberic = function(args) {
     var me = this;
     args = args || {};
     for (var o in args) {
@@ -20,7 +20,7 @@ var numberic = function(args) {
     if (me.el) me.init();
 };
 
-numberic.prototype = {
+Numberic.prototype = {
     init: function() {
         var me = this;
         
