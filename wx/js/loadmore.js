@@ -11,7 +11,7 @@
  *  
  *  
  */
-var Loadmore = function(args) {
+var LoadMore = function(args) {
     var me = this;
     args = args || {};
     for (var o in args) {
@@ -22,7 +22,7 @@ var Loadmore = function(args) {
     if (me.el) me.init();
 };
 
-Loadmore.prototype = {
+LoadMore.prototype = {
     init: function() {
         var me = this;
         
@@ -59,6 +59,23 @@ Loadmore.prototype = {
             },
             dataType: 'json'
         });
+    },
+    
+    setUI: function(status) {
+        /*
+         *  0: initial
+         *  1: loading
+         *  2: fail
+         *  
+         */
+        if (status === 0) {
+            
+        }
+    },
+    
+    reset: function() {
+        this.setUI(0);
+        this.page = 1;
     }
     
 };

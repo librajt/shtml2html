@@ -4,9 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimum-scale=1.0,maximum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script src="../js/jquery-2.0.3.min.js"></script>
-<script src="../js/jquery.bxslider.min.js"></script>
-<script src="../js/numberic.js"></script>
+<script src="../js/shop.min.js"></script>
 <title></title>
 <link rel="stylesheet" type="text/css" href="../css/g.css" media="all">
 
@@ -150,32 +148,6 @@
 </div>
 
 
-<script>
-$(document).ready(function () {
-    $('.sellPics .picWrap').bxSlider({
-        controls: false,
-        slideWidth: 280,
-        infiniteLoop: false
-    });
-
-    var setNum = new numberic({
-        el: '.num',
-        max: 35,
-        valid: function() {
-            var msg = [];
-            if (!$('.orderItems .color .value input:checked').val()) msg.push('color');
-            if (!$('.orderItems .size .value input:checked').val()) msg.push('size');
-            if (msg.length > 0) {
-                alert(msg.join(', ') + ' required!');
-                return false;
-            }
-            else return true;
-        }
-    });
-    
-});
-    
-</script>
 <style>.mw{display:none;}</style>
 
 </body>

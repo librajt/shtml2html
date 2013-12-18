@@ -141,32 +141,6 @@
 </div>
 
 
-<script>
-$(document).ready(function () {
-    $('.sellPics .picWrap').bxSlider({
-        controls: false,
-        slideWidth: 280,
-        infiniteLoop: false
-    });
-
-    var setNum = new numberic({
-        el: '.num',
-        max: 35,
-        valid: function() {
-            var msg = [];
-            if (!$('.orderItems .color .value input:checked').val()) msg.push('color');
-            if (!$('.orderItems .size .value input:checked').val()) msg.push('size');
-            if (msg.length > 0) {
-                alert(msg.join(', ') + ' required!');
-                return false;
-            }
-            else return true;
-        }
-    });
-    
-});
-    
-</script>
 <style>.mw{display:none;}</style>
 
 </body>
