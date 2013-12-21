@@ -4,6 +4,7 @@
  *      el: 'css selector'
  *      max: number
  *      valid: function, return bool value
+ *      callback: function, set final value
  *  }
  *  
  *  update(max)
@@ -105,6 +106,7 @@ Numberic.prototype = {
 
         me.inputVal.value = me.val;
         me.checkEnable();
+        me.callback(me.val);
     },
     
     setDesVal: function(v) {

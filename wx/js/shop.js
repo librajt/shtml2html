@@ -53,21 +53,59 @@ var SHOP = {
             slideWidth: 280,
             infiniteLoop: false
         });
-
-        var setNum = new Numberic({
+        
+        var setNum, choices = $('.orderItem .choice input'), color = -1, size = -1, addToCart = $('.addToCart');
+        setNum = new Numberic({
             el: '.num',
-            max: 35,
             valid: function() {
                 var msg = [];
-                if (!$('.orderItems .color .value input:checked').val()) msg.push('color');
-                if (!$('.orderItems .size .value input:checked').val()) msg.push('size');
+                if (color < 0) msg.push('color');
+                if (size < 0) msg.push('size');
                 if (msg.length > 0) {
                     alert(msg.join(', ') + ' required!');
                     return false;
                 }
                 else return true;
+            },
+            callback: function(val) {
+                if (!window.detailOrder) return;
+                window.detailOrder.count = val;
             }
         });
+        
+        window.detailCount = [
+            [12, 23, 34, 45, 56],
+            [21, 32, 43, 54, 65]
+        ];
+        
+        choices.on('click', function(e) {
+            var el = $(e.currentTarget), name = el.attr('name'), index = el.parent('.choice').index();
+            if (name === 'color') color = index;
+            else if (name === 'size') size = index;
+            
+            window.detailOrder = window.detailOrder || {};
+            if (color >= 0) window.detailOrder.color = $('.orderItem.color .choice').eq(color).find('.cnt').html();
+            if (size >= 0) window.detailOrder.size = $('.orderItem.size .choice').eq(size).find('.cnt').html();
+            if (color >= 0 && size >= 0) {
+                setNum.update(window.detailCount[color][size]);
+                window.detailOrder.count = 0;
+            }
+        });
+        
+        addToCart.on('click', function(e) {
+            e.preventDefault();
+            if (!window.detailOrder) alert('selece first');
+            else if (!window.detailOrder.color) alert('color need');
+            else if (!window.detailOrder.size) alert('size need');
+            else if (window.detailOrder.count <= 0) alert('zero');
+            else {
+                // TODO add
+                choices.attr('checked', false);
+                setNum.update(0);
+                window.detailOrder = {};
+            }
+        });
+
     },
     
     init: function() {
