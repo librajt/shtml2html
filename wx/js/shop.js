@@ -54,7 +54,7 @@ var SHOP = {
             infiniteLoop: false
         });
         
-        var setNum, choices = $('.orderItem .choice input'), color = -1, size = -1, addToCart = $('.addToCart');
+        var setNum, choices = $('.orderItem .choice input'), color = -1, size = -1, addToCart = $('.addToCart'), cartList = $('.cartList .cartItemWrap');
         setNum = new Numberic({
             el: '.num',
             valid: function() {
