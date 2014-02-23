@@ -155,21 +155,20 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 
 /* ---------- 7- seller ---------- */
 .aboutSeller{overflow:hidden;}
-.sellerInfo{border-top:1px solid #D9D6CA;padding:10px;}
-.sellerInfo:first-child{border-top:0;}
-.sellerInfo h3{padding:10px;margin:0 -10px;font-size:18px;color:#585858;}
+.aboutSeller .ap{border-top:1px solid #D9D6CA;padding:10px;}
+.aboutSeller .ap:first-child{border-top:0;}
+.aboutSeller .ap h3{padding:10px;margin:0 -10px;font-size:18px;color:#585858;}
 
-.sellerInfo_brand .pic img{width:100%;}
+.apBrand .pic img{width:100%;}
 
-.sellerInfo_intro .desc{font-size:18px;color:#585858;min-height:100px;}
-.sellerInfo_intro .call .btn .i{vertical-align:-6px;margin-right:5px;}
+.apIntro .desc{font-size:18px;color:#585858;min-height:100px;}
+.apIntro .call .btn .i{vertical-align:-6px;margin-right:5px;}
 
-.sellerInfo_progress{overflow:hidden;}
-.sellerInfo_progress .step{margin:10px 0;position:relative;background:#FFFFFF;padding:10px 10px 10px 65px;line-height:38px;min-height:38px;}
-.sellerInfo_progress .step .sOrder{font-size:24px;color:#FFFFFF;position:absolute;top:10px;left:10px;width:40px;height:38px;text-align:center;background:#CD9C71;}
-.sellerInfo_progress .step .cnt{font-size:15px;color:#585858;}
-.sellerInfo_progress .opts{margin:10px;}
-.sellerInfo_progress .call .btn .i{vertical-align:-6px;margin-right:5px;}
+.apProgress{overflow:hidden;}
+.apProgress .step{margin:10px 0;position:relative;background:#FFFFFF;padding:10px 10px 10px 65px;line-height:38px;min-height:38px;}
+.apProgress .step .sOrder{font-size:24px;color:#FFFFFF;position:absolute;top:10px;left:10px;width:40px;height:38px;text-align:center;background:#CD9C71;}
+.apProgress .step .cnt{font-size:15px;color:#585858;}
+.apProgress .call .btn .i{vertical-align:-6px;margin-right:5px;}
 
 /* ---------- 9- calls ---------- */
 /* calls */

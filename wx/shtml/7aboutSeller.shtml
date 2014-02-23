@@ -5,24 +5,24 @@
 <body>
 
 <div class="aboutSeller">
-    <div class="sellerInfo sellerInfo_brand">
-        <div class="info brand">
+    <div class="ap apBrand">
+        <div class="cnt brand">
             <div class="pic">
                 <div class="img"><img src="../image/d/1.jpg" alt=""></div>
             </div>
         </div>
     </div>
 
-    <div class="sellerInfo sellerInfo_intro">
+    <div class="ap apIntro">
         <h3>商户介绍</h3>
-        <div class="info intro">
+        <div class="cnt intro">
             <div class="desc">Buduturry诚信经营10余年，服装质量、售后服务和品牌信誉有口皆碑，请您放心选购！</div>
         </div>
     </div>
 
-    <div class="sellerInfo sellerInfo_progress">
+    <div class="ap apProgress">
         <h3>购买须知</h3>
-        <div class="info steps">
+        <div class="cnt steps">
             <div class="wrap stepWrap">
                 <div class="step step1">
                     <div class="sOrder">1</div>
