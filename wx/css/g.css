@@ -1,0 +1,309 @@
+/* reset */
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal;}
+ul,ol,li{list-style:none;}
+em,i,b{font-style:normal;font-weight:normal;}
+img{border:none;}
+button,input,img,video{vertical-align:middle;}
+input[type="text"],input[type="tel"],input[type="password"],input[type="button"],input[type="submit"],button,textarea,select{-webkit-appearance:none;border:0;outline:none;border-radius:0;}
+button,input,select{-webkit-box-sizing:border-box;box-sizing:border-box;}
+a{text-decoration:none;}
+body{}
+
+html{height:100%;-webkit-text-size-adjust:none;}
+body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
+
+/* tools */
+.wrap:after,
+.cfx:after
+{content:'';display:table;clear:both;}
+
+.sell .main,
+.category .main,
+.filters,
+.process .step,
+.btnA,
+.btnB,
+.btnC,
+.box{-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.07);-moz-box-shadow:1px 1px 1px rgba(0,0,0,.07);box-shadow:1px 1px 1px rgba(0,0,0,.07);}
+
+/* ico   iG_A1代表global图片中的A行1列图标 */
+.i{width:16px;height:16px;display:inline-block;vertical-align:-3px;background:#CCC;}
+
+
+.iG{background:url("../image/iGlobal.png") no-repeat;-webkit-background-size:100px auto;background-size:100px auto;width:25px;height:25px;}
+.iG_A1{background-position:0 0;width:20px;height:20px;}
+.iG_A2{background-position:-25px 0;}
+.iG_A3{background-position:-50px 0;}
+.iG_A4{background-position:-75px 0;width:9px;height:9px;}
+
+.iG_B1{background-position:0 -25px;width:20px;height:20px;}
+.on .iG_B1{background-position:-25px -25px;}
+
+.iG_C1{background-position:0 -50px;width:20px;height:20px;}
+.iG_C2{background-position:-25px -50px;width:20px;height:20px;}
+
+.iG_D1{background-position:0 -75px;width:25px;height:25px;}
+
+.iN{background:url("../image/iNav.png") no-repeat;-webkit-background-size:125px auto;background-size:125px auto;width:25px;height:25px;}
+.iN_A1{background-position:0 0;}
+.iN_A2{background-position:-25px 0;}
+.iN_A3{background-position:-50px 0;}
+.iN_A4{background-position:-75px 0;}
+.iN_A5{background-position:-100px 0;}
+
+.iL1{width:50px;height:15px;background:url("../image/loading.gif") no-repeat center;-webkit-background-size:50px auto;background-size:50px auto;}
+
+
+
+/* btn */
+.btn{text-align:center;}
+
+.btnA{display:block;background:#CD9C71;line-height:50px;color:#FFF;font-size:18px;}
+.btnB{display:block;background:#FF7700;line-height:50px;color:#FFF;font-size:18px;}
+.btnC{display:block;background:#FFF;line-height:50px;color:#585858;font-size:18px;}
+
+/* sel */
+.sel{background:#FFFFFF;display:block;text-align:center;position:relative;}
+.sel select{display:block;width:100%;padding:0 10px;background-color:transparent;position:relative;z-index:1;}
+.sel:after{content:'';position:absolute;z-index:0;width:16px;height:16px;right:10px;top:50%;margin-top:-8px;background:url("../image/iSel.png") no-repeat;-webkit-background-size:16px auto;background-size:16px auto;}
+
+/* pic */
+.pic_cover{display:table;}
+.pic_cover .img{display:table-cell;vertical-align:middle;text-align:center;}
+
+/* loadMore */
+.loadMore{padding:10px;}
+.loadMore{}
+
+/* toolbar */
+.siteNavs{height:52px;margin-top:20px;}
+.siteNavWrap{position:fixed;z-index:99;left:0;bottom:0;width:100%;min-width:320px;background:#F1F1F1;border-top:1px solid #D9D6CA;}
+.siteNav{width:20%;float:left;}
+.siteNav .btn{display:block;padding:4px 0;font-size:12px;color:#000;text-align:center;}
+.siteNav .btn b{display:block;line-height:18px;}
+.siteNavs .on{background:#DCDCDC;}
+
+/* sellPics */
+.sellPics{overflow:hidden;}
+.sellPics .picWrap{display:table;}
+.sellPics .pic{display:table-cell;text-align:center;vertical-align:middle;height:200px;width:270px;float:none!important;}
+.sellPics .pic .img{padding:0 5px;}
+.sellPics .pic img{max-width:270px;max-height:200px;}
+
+.bx-wrapper{position:relative;margin:auto;}
+.bx-wrapper .bx-viewport{overflow:visible!important;}
+.bx-wrapper .bx-pager{text-align:center;font-size:.85em;font-family:Arial;font-weight:bold;color:#666;padding-top:10px;}
+.bx-wrapper .bx-pager .bx-pager-item,.bx-wrapper .bx-controls-auto .bx-controls-auto-item{display:inline-block;*zoom:1;*display:inline;vertical-align:top;}
+.bx-wrapper .bx-pager.bx-default-pager a{background:#AAA;text-indent:-9999px;display:block;width:10px;height:10px;margin:0 5px;outline:0;border-radius:0px;}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,.bx-wrapper .bx-pager.bx-default-pager a.active{background:#FF7700;}
+
+/* sell */
+.sell .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;}
+.sell .pic{position:absolute;left:0;top:0;width:140px;height:140px;}
+.sell .img img{max-width:140px;max-height:140px;}
+.sell .name{color:#585858;font-size:18px;}
+.sell .price{color:#FF7700;text-align:right;position:absolute;right:10px;bottom:10px;}
+.sell .discount{font-size:18px;}
+.sell .whole{font-size:15px;color:#C4C4C4;}
+
+
+/* order */
+.order{}
+.order .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;font-size:12px;line-height:20px;color:#888888;}
+.order .name h4{height:40px;font-size:15px;color:#585858;}
+.order .pic{position:absolute;left:0;top:0;width:140px;height:140px;background:#CECECE;}
+.order .img img{max-width:140px;max-height:140px;}
+.order .toDetail{position:absolute;right:10px;top:50%;margin-top:-10px;}
+
+/* cartItem */
+.cartItem{}
+.cartItem .main{display:block;padding:10px;background:#FFFFFF;padding-left:90px;position:relative;min-height:60px;font-size:12px;line-height:20px;color:#585858;}
+.cartItem .pic{position:absolute;left:0;top:0;width:80px;height:80px;background:#CECECE;}
+.cartItem .img img{max-width:80px;max-height:80px;}
+.cartItem .price{position:absolute;right:10px;bottom:10px;font-size:15px;color:#FF7700;}
+.cartItem .delete{position:absolute;top:0;right:0;padding:0 0 20px 20px;}
+.cartItem .delete b{background:#C8C8C8;padding:5px;line-height:1;display:block;width:12px;height:12px;text-align:center;}
+.cartItem .delete i{vertical-align:0;}
+
+/* ---------- 1- home -------- */
+.sellType{margin:0 10px;}
+.sellType h2{line-height:36px;padding-top:5px;font-size:22px;color:#585858;}
+
+.sellList .sell{margin:10px;}
+
+.siteSpot{}
+.siteSpot h3{background:#363636;text-align:center;font-size:18px;color:#D1D1D1;line-height:30px;}
+.siteSpot .sellPics{background:#4E4E4E;padding:10px 0;}
+
+
+/* ---------- 2- 3- category ---------- */
+.category{margin:10px;}
+.categoryWrap{overflow:hidden;}
+.category .main{display:block;position:relative;background:#FFFFFF;}
+.category .title{padding:20px;font-size:18px;line-height:24px;color:#585858;}
+.category .toDetail{position:absolute;right:20px;top:50%;margin-top:-10px;}
+
+.filters{}
+.filter{width:50%;float:left;}
+.filter select{font-size:18px;color:#585858;text-align:center;height:44px;}
+.filters .orderBy .sel{border-left:1px solid #D4D4D4;}
+
+.sortedList .sell{margin:10px;}
+
+
+/* ---------- 7- seller ---------- */
+.aboutSeller{overflow:hidden;}
+.sellerInfo{border-top:1px solid #D9D6CA;padding:10px;}
+.sellerInfo:first-child{border-top:0;}
+.sellerInfo h3{padding:10px;margin:0 -10px;font-size:18px;color:#585858;}
+
+.sellerInfo_brand .pic img{width:100%;}
+
+.sellerInfo_intro .desc{font-size:18px;color:#585858;min-height:100px;}
+.sellerInfo_intro .call .btn .i{vertical-align:-6px;margin-right:5px;}
+
+.sellerInfo_progress{overflow:hidden;}
+.sellerInfo_progress .step{margin:10px 0;position:relative;background:#FFFFFF;padding:10px 10px 10px 65px;line-height:38px;min-height:38px;}
+.sellerInfo_progress .step .sOrder{font-size:24px;color:#FFFFFF;position:absolute;top:10px;left:10px;width:40px;height:38px;text-align:center;background:#CD9C71;}
+.sellerInfo_progress .step .cnt{font-size:15px;color:#585858;}
+.sellerInfo_progress .opts{margin:10px;}
+.sellerInfo_progress .call .btn .i{vertical-align:-6px;margin-right:5px;}
+
+/* ---------- 9- calls ---------- */
+/* calls */
+.calls{}
+.callList .call{display:block;border-bottom:1px solid #AEAEAE;padding:15px 10px;position:relative;}
+.callList .call .name{font-size:18px;color:#585858;}
+.callList .call .number{font-size:18px;color:#FF7700;}
+.callList .call .toCall{position:absolute;right:10px;top:50%;margin-top:-12px;}
+
+
+/* ---------- 4- detail ---------- */
+/* orderOpts */
+.orderOpts{height:62px;}
+.orderOpts .wrap{border-top:2px solid #D9D6CA;background:#FFFFFF;padding:5px 0;width:100%;position:fixed;left:0;bottom:0;}
+.orderOpts .opt{width:50%;float:left;-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 5px;}
+.orderOpts .call .btn .i{vertical-align:-6px;margin-right:5px;}
+.orderOpts .single .opt{margin-left:25%;}
+
+
+/* mw */
+.mw{background:rgba(255,255,255,.9);-webkit-box-sizing:border-box;box-sizing:border-box;width:280px;padding:30px;position:fixed;left:50%;margin-left:-140px;}
+.mw .cnt{font-size:18px;color:#585858;line-height:36px;text-align:center;}
+
+.mw.payResult .cnt b{color:#FF7700;}
+.mw.loading .wait{text-align:center;}
+
+
+/* --public-- */
+.detail{}
+.detail .ap{padding:15px;border-top:1px solid #D9D6CA;}
+.detail .hd h3{float:left;color:#585858;font-size:18px;}
+.detail .hd .opts{float:right;}
+
+/* pics */
+.detail .sellPics{background:#CBC8BD;padding:10px 0;}
+
+
+/* sellInfo */
+.detail .sellInfo{position:relative;color:#585858;}
+.detail .sellInfo .name{font-size:18px;padding-bottom:5px;}
+.detail .sellInfo .sid{font-size:15px;padding-bottom:5px;}
+.detail .sellInfo .price{font-size:24px;color:#FF7700;position:absolute;right:15px;bottom:10px;}
+
+/* orderForm */
+.orderForm{}
+
+.orderItem{position:relative;padding-left:50px;line-height:28px;margin-bottom:10px;font-size:15px;color:#585858;}
+.orderItem .title{position:absolute;top:1px;left:0;}
+
+.orderItem .choice{display:inline-block;vertical-align:middle;min-width:60px;text-align:center;margin-bottom:10px;}
+.orderItem .choice input{display:none;}
+.orderItem .choice .cnt{background:#FFFFFF;padding:1px 5px;border:1px solid #B1B1B1;}
+.orderItem .choice input:checked + .cnt{padding:0px 4px;border:2px solid #FF7700;}
+
+.orderItem .num{margin-bottom:10px;}
+.orderItem .numWrap{display:inline-block;vertical-align:middle;font-size:0;}
+.orderItem .num .btn{width:30px;height:30px;border:1px solid #B1B1B1;font-size:24px;color:#808080;text-align:center;background-image:-webkit-linear-gradient(bottom, #DBDBDB, #FFF);background-image:linear-gradient(to top, #DBDBDB, #FFF);}
+.orderItem .num .btn .i{vertical-align:-2px;}
+.orderItem .num .cnt{font-size:14px;height:30px;border:1px solid #B1B1B1;width:60px;text-align:center;margin:0 -1px;}
+.orderItem .num .disable{background:#E6E6E6;}
+.orderItem .num .des{display:inline-block;vertical-align:middle;margin-left:10px;}
+
+/* sellIntro */
+.sellIntro{}
+.sellIntro .cnt p{padding:5px 0;font-size:15px;color:#585858;}
+
+/* ---------- 5- confirm ---------- */
+/* sellList */
+.sellList{}
+.sellItem{}
+.sellItem .info{float:left;font-size:15px;line-height:20px;color:#909090;}
+.sellItem .info .it{display:inline-block;margin-right:10px;}
+.sellItem .info .pic{width:40px;height:20px;position:relative;}
+.sellItem .info .pic .img{position:absolute;width:40px;height:40px;top:-7px;}
+.sellItem .info .pic img{width:100%;height:100%;}
+.sellItem .price{float:right;color:#FF7700;}
+
+.sellList .total{font-size:15px;color:#909090;text-indent:2em;}
+.sellList .total .info{float:left;}
+.sellList .total .price{float:right;font-size:24px;color:#FF7700;}
+
+/* payDetail */
+.payInfo{}
+.payInfo h3{font-size:18px;color:#585858;padding:15px;border-bottom:1px solid #D9D6CA;}
+
+.payInfo .sellItem{padding:15px;border-bottom:1px solid #D9D6CA;}
+.payInfo .sellItem .info{font-size:15px;color:#585858;float:left;}
+.payInfo .sellItem .prise{font-size:18px;color:#FF7700;float:right;}
+.payInfo .total{padding:15px;}
+
+/* addressDetail */
+.addressInfo{}
+.addressInfo h3{font-size:18px;color:#585858;padding:15px;border-bottom:1px solid #D9D6CA;}
+
+.addressForm{padding:20px 0;}
+.addressForm .frm{display:block;position:relative;padding-left:4em;margin:12px 30px;}
+.addressForm .frm .des{position:absolute;left:0;top:8px;font-size:15px;color:#585858;}
+.addressForm .frm .data{}
+.addressForm .frm .data input{height:36px;padding:9px;width:200px;border:1px solid #B1B1B1;}
+
+/* ---------- 6- success ---------- */
+/* paySuccess */
+.paySuccess{}
+.paySuccess h2{margin:10px 15px;font-size:24px;color:#FF7700;}
+.paySuccess h3{margin:10px 15px;font-size:15px;color:#585858;}
+
+.orderReview .order{margin:20px 10px;}
+
+/* ---------- 10- orders ---------- */
+.orderList{overflow:hidden;}
+.orderList .order{margin:10px;}
+.orderList .order .blank{text-align:center;line-height:80px;}
+
+/* ---------- 11- order detail ---------- */
+.orderDetail{}
+.orderDetail .ap{border-top:1px solid #D9D6CA;}
+.orderDetail .ap:first-child{border-top:0;}
+.orderDetail .ap h3{padding:10px 10px 0 10px;font-size:15px;color:#585858;}
+.orderDetail .ap .cnt{padding:10px;}
+
+.apOrderInfo .cnt{font-size:12px;color:#585858;}
+.apOrderInfo .cnt .status{color:#2CB900;}
+.apOrderInfo .cnt span{margin-right:10px;}
+
+.apAddressInfo .frmS{display:block;position:relative;margin:5px 0;padding-left:4em;font-size:12px;color:#585858;line-height:1.5;}
+.apAddressInfo .frmS .des{position:absolute;left:0;top:0px;}
+
+.apCartList .cartItem{margin:10px 0;}
+
+/* ---------- 12- cart ---------- */
+.cart{}
+.cart h3{padding:10px 10px 0 10px;font-size:15px;color:#585858;}
+.cart .cartItem{margin:10px;}
+.cart .cartItem .cid,.cart .cartItem .count{color:#888888;}
+.cart .totalPrice{margin:20px;text-align:right;font-size:15px;color:#585858;}
+.cart .totalPrice span{font-size:18px;color:#FF7700;}
+.cart .opts{margin:20px 30px;}
