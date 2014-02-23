@@ -111,6 +111,20 @@ var SHOP = {
                 setNum.update(0);
                 window.detailOrder = {};
             }
+            e.stopPropagation();
+        });
+        
+        cartList.on('click', '.cartItem .delete', function(e) {
+            // TODO remove
+            e.stopPropagation();
+        });
+        
+        var sellIntro = $('.sellIntro'), sellIntroStatus = sellIntro.find('.status'), sellIntroCnt = sellIntro.find('.cnt');
+        sellIntroStatus.on('click', function(e) {
+            var cls = 'on';
+            sellIntroStatus.toggleClass(cls);
+            if (sellIntroStatus.hassClass(cls)) sellIntroCnt.show();
+            else sellIntroCnt.hide();
         });
 
     },
