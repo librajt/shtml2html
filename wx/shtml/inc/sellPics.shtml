@@ -1,0 +1,12 @@
+    <div class="sellPics">
+        <div class="wrap picWrap">
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x300" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x100" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x200" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x300" alt=""></div></div>
+            <div class="pic"><div class="img"><img src="http://placehold.it/280x100" alt=""></div></div>
+        </div>
+    </div>

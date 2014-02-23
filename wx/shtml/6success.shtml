@@ -1,0 +1,25 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="paySuccess">
+    <h2>支付成功！</h2>
+    <h3>系统已经为您生成订单！</h3>
+    <h3>请联系商户咨询支付方式。</h3>
+    <div class="orderReview">
+<!--#include file="inc/order.shtml"-->
+    </div>
+</div>
+
+<div class="orderOpts">
+    <div class="wrap optWrap">
+        <div class="opt goHome"><a href="#3" class="btn btnA"><b>回首页</b></a></div>
+        <div class="opt toSeller"><a href="#3" class="btn btnB"><b>联系商户</b></a></div>
+    </div>
+</div>
+
+
+</body>
+</html>
