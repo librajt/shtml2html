@@ -16,12 +16,19 @@ var SHOP = {
     },
     
     home: function() {
+        $('.sellPics .picWrap').bxSlider({
+            controls: false,
+            slideWidth: 280,
+            infiniteLoop: false
+        });
+        
         new LoadMore({
             el: '.loadmore',
             successFn: function(list) {
                 _.template(TEMPLATES.home.loadmore, list);
             }
         });
+        
     },
     
     category: function() {
@@ -109,7 +116,7 @@ var SHOP = {
     },
     
     init: function() {
-        var page = window.location.href.match(/html\/(\w*)\.html/)[1];
+        var page = window.location.href.match(/s?html\/\d+(\w*)\.s?html/)[1];
 
         switch (page) {
             case 'home':

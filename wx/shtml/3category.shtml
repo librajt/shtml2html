@@ -25,9 +25,9 @@
 
 <div class="sells sortedList">
     <div class="wrap sellWrap">
-<!--#include file="inc/sell2.shtml"-->
-<!--#include file="inc/sell2.shtml"-->
-<!--#include file="inc/sell2.shtml"-->
+<!--#include file="inc/sell.shtml"-->
+<!--#include file="inc/sell.shtml"-->
+<!--#include file="inc/sell.shtml"-->
     </div>
 </div>
 

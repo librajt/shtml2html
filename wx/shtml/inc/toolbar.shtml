@@ -3,7 +3,7 @@
         <div class="siteNav on"><a href="#3" class="btn"><i class="i iN iN_A1"></i><b>店铺首页</b></a></div><!-- @后端：当前页面增加类名on -->
         <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A2"></i><b>分类筛选</b></a></div>
         <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A3"></i><b>商户介绍</b></a></div>
-        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A4"></i><b>购买须知</b></a></div>
         <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A5"></i><b>我的定单</b></a></div>
+        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A4"></i><b>购物车</b></a></div>
     </div>
 </div>

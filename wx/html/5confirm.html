@@ -11,12 +11,13 @@
 </head>
 <body>
 
-<div class="sellList payDetail">
+<div class="sellList payInfo">
     <h3>结算信息</h3>
-    <div class="wrap sellItemWrap">
+    <div class="wrap sellListWrap">
         <div class="sellItem">
             <div class="wrap sellItemWrap">
                 <div class="info">
+                    <div class="it pic"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
                     <div class="it color">红色</div>
                     <div class="it size">L</div>
                     <div class="it count">5件</div>
@@ -27,6 +28,7 @@
         <div class="sellItem">
             <div class="wrap sellItemWrap">
                 <div class="info">
+                    <div class="it pic"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
                     <div class="it color">红色</div>
                     <div class="it size">L</div>
                     <div class="it count">5件</div>
@@ -35,30 +37,38 @@
             </div>
         </div>
         <div class="total">
-            共需要支付<div class="price">￥2576</div>
+            <div class="wrap sellItemWrap">
+                <div class="info">合计</div>
+                <div class="price">￥2576</div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="addressDetail">
-    <h3>结算信息</h3>
+<div class="addressInfo">
+    <h3>收货信息</h3>
     <div class="wrap addressWrap">
-        <a href="#3" class="address">
-            <div class="main"><div class="blank">+新增收货地址</div></div>
-        </a>
-        <label class="address">
-            <div class="main">
-                <input type="radio" name="address">
-                <div class="cnt">北京 北京市 海淀区 中关村东路一号院XXXX大厦XXX层 (<b class="uname">大熊</b> 收) <b class="tel">13800138000</b></div>
-            </div>
-        </label>
+        <div class="addressForm">
+            <label class="frm reveiver">
+                <div class="des">收货人：</div>
+                <div class="data"><div class="txt"><input type="text"></div></div>
+            </label>
+            <label class="frm tel">
+                <div class="des">电　话：</div>
+                <div class="data"><div class="txt"><input type="text"></div></div>
+            </label>
+            <label class="frm address">
+                <div class="des">地　址：</div>
+                <div class="data"><div class="txt"><input type="text"></div></div>
+            </label>
+        </div>
     </div>
 </div>
 
 <div class="orderOpts">
     <div class="wrap optWrap">
         <div class="opt goBack"><a href="#3" class="btn btnA"><b>上一步</b></a></div>
-        <div class="opt pay"><a href="#3" class="btn btnB"><b>付款</b></a></div>
+        <div class="opt submitOrder"><a href="#3" class="btn btnB"><b>提交订单</b></a></div>
     </div>
 </div>
 
