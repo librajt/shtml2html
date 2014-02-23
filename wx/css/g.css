@@ -247,7 +247,7 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .sellItem .price{float:right;color:#FF7700;}
 
 .sellList .total{font-size:15px;color:#909090;text-indent:2em;}
-.sellList .total .info{float:left;}
+.sellList .total .info{float:left;width:5em;}
 .sellList .total .price{float:right;font-size:24px;color:#FF7700;}
 
 /* payDetail */
