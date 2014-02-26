@@ -130,24 +130,26 @@ var SHOP = {
     },
     
     init: function() {
-        var page = window.location.href.match(/s?html\/\d+(\w*)\.s?html/)[1];
+        var page = window.location.href.match(/fore\/(\w*)\.action/);
 
-        switch (page) {
-            case 'home':
-                this.home();
-                break;
-            case 'catetory':
-                this.category();
-                break;
-            case 'orders':
-                this.orders();
-                break;
-            case 'detail':
-                this.detail();
-                break;
+        if (page && page[1]) {
+            switch (page[1]) {
+                case 'shophome.action':
+                    this.home();
+                    break;
+                case 'catetory':
+                    this.category();
+                    break;
+                case 'orders':
+                    this.orders();
+                    break;
+                case 'detail':
+                    this.detail();
+                    break;
+            }
+            
+            this.common.initCall();
         }
-        
-        this.common.initCall();
     }
 };
 
