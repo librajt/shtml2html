@@ -134,7 +134,7 @@ var SHOP = {
 
         if (page && page[1]) {
             switch (page[1]) {
-                case 'shophome.action':
+                case 'shophome':
                     this.home();
                     break;
                 case 'catetory':
