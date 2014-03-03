@@ -81,15 +81,16 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .siteNavs{height:52px;margin-top:20px;}
 .siteNavWrap{position:fixed;z-index:99;left:0;bottom:0;width:100%;min-width:320px;background:#F1F1F1;border-top:1px solid #D9D6CA;}
 .siteNav{width:20%;float:left;}
-.siteNav .btn{display:block;padding:4px 0;font-size:12px;color:#000;text-align:center;}
+.siteNav .btn{display:block;padding:4px 0;font-size:12px;color:#000;text-align:center;position:relative;}
 .siteNav .btn b{display:block;line-height:18px;}
 .siteNavs .on{background:#DCDCDC;}
+.siteNavs .reminder{position:absolute;width:12px;height:12px;border-radius:999px;background:#B00;top:3px;left:50%;margin-left:10px;font-size:9px;line-height:12px;text-align:center;color:#FFF;}
 
 /* sellPics */
 .sellPics{overflow:hidden;}
-.sellPics .picWrap{display:table;}
-.sellPics .pic{display:table-cell;text-align:center;vertical-align:middle;height:200px;width:270px;float:none!important;}
-.sellPics .pic .img{padding:0 5px;}
+.sellPics .picWrap{font-size:0;}
+.sellPics .pic{float:none!important;display:inline-block;vertical-align:top;}
+.sellPics .pic .img{padding:0 5px;display:table-cell;text-align:center;vertical-align:middle;height:200px;width:270px;}
 .sellPics .pic img{max-width:270px;max-height:200px;}
 
 .bx-wrapper{position:relative;margin:auto;}
@@ -134,8 +135,10 @@ body{background:#F2EEE1;min-height:100%;min-width:320px;margin:auto;}
 .sellList .sell{margin:15px 10px;}
 
 .siteSpot{}
-.siteSpot h3{background:#363636;text-align:center;font-size:18px;color:#D1D1D1;line-height:30px;}
 .siteSpot .sellPics{background:#4E4E4E;padding:10px 0;}
+.siteSpot .sellPics{padding-top:5px;}
+.siteSpot .sellPics .pic{}
+.siteSpot .sellPics .title{background:#363636;text-align:center;font-size:18px;color:#D1D1D1;line-height:30px;margin:5px 0;}
 
 
 /* ---------- 2- 3- category ---------- */
