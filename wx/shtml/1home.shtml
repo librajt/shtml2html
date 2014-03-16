@@ -5,8 +5,7 @@
 <body>
 
 <div class="siteSpot">
-    <h3>2013秋冬季新的款收腰风衣连衣裙</h3>
-<!--#include file="inc/sellPics.shtml"-->
+<!--#include file="inc/sellPicsHome.shtml"-->
 </div>
 
 <div class="sellType">
