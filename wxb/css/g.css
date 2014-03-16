@@ -1,0 +1,131 @@
+/* reset */
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal;}
+ul,ol,li{list-style:none;}
+em,i,b{font-style:normal;font-weight:normal;}
+img{border:none;}
+button,input,img,video{vertical-align:middle;}
+input[type="text"],input[type="tel"],input[type="password"],input[type="button"],input[type="submit"],button,textarea,select{-webkit-appearance:none;border:0;outline:none;border-radius:0;}
+button,input,select{-webkit-box-sizing:border-box;box-sizing:border-box;}
+a{text-decoration:none;color:#008AFF;}
+body{font-family:\5fae\8f6f\96c5\9ed1,Arial,Helvetica,sans-serif;}
+
+html{height:100%;-webkit-text-size-adjust:none;}
+body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:auto;line-height:1;}
+
+/* tools */
+.cfx:after{content:'';display:table;clear:both;}
+
+.sell .cnt,
+.category .main,
+.filters,
+.process .step,
+.btnA,
+.btnB,
+.btnC,
+.box{-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.07);-moz-box-shadow:1px 1px 1px rgba(0,0,0,.07);box-shadow:1px 1px 1px rgba(0,0,0,.07);}
+
+/* ico   iG_A1代表global图片中的A行1列图标 */
+.i{width:16px;height:16px;display:inline-block;vertical-align:-3px;background:#CCC;}
+.i1{background:url("../image/prodAdd.png") no-repeat;-webkit-background-size:100% auto;background-size:100% auto;width:44px;height:44px;}
+
+.iG{background:url("../image/iGlobal.png") no-repeat;-webkit-background-size:100px auto;background-size:100px auto;width:25px;height:25px;}
+.iG_A1{background-position:0 0;width:20px;height:20px;}
+
+.iN{background:url("../image/iNav.png") no-repeat;-webkit-background-size:125px auto;background-size:125px auto;width:25px;height:25px;}
+.iN_A1{background-position:0 0;width:28px;}
+.iN_A2{background-position:-28px 0;width:22px;}
+.iN_A3{background-position:-50px 0;}
+.iN_A4{background-position:-75px 0;}
+.iN_A5{background-position:-100px 0;}
+
+.iL1{width:50px;height:15px;background:url("../image/loading.gif") no-repeat center;-webkit-background-size:50px auto;background-size:50px auto;}
+
+
+
+/* frm */
+.frm{display:block;}
+
+/* btn */
+.btn{text-align:center;}
+.btnA{display:block;width:100%;background:#A276DD;line-height:50px;color:#FFF;font-size:18px;}
+.btnB{display:block;width:100%;background:#FF7700;line-height:50px;color:#FFF;font-size:18px;}
+.btnC{display:block;width:100%;background:#FFF;line-height:50px;color:#585858;font-size:18px;}
+
+/* sel */
+.sel{background:#FFFFFF;display:block;text-align:center;position:relative;}
+.sel select{display:block;width:100%;padding:0 10px;background-color:transparent;position:relative;z-index:1;}
+.sel:after{content:'';position:absolute;z-index:0;width:16px;height:16px;right:10px;top:50%;margin-top:-8px;background:url("../image/iSel.png") no-repeat;-webkit-background-size:16px auto;background-size:16px auto;}
+
+/* pic */
+.pic_cover{display:table;}
+.pic_cover .img{display:table-cell;vertical-align:middle;text-align:center;}
+
+/* loadMore */
+.loadMore{padding:10px;}
+.loadMore{}
+
+
+/* toolbar */
+.siteNavs{height:52px;margin-top:20px;}
+.siteNavWrap{position:fixed;z-index:99;left:0;bottom:0;width:100%;min-width:320px;background:#F1F1F1;border-top:1px solid #D9D6CA;}
+.siteNav{width:20%;float:left;}
+.siteNav .btn{display:block;padding:4px 0 3px;font-size:12px;color:#000;text-align:center;position:relative;}
+.siteNav .btn b{display:block;line-height:18px;}
+.siteNavs .on{background:#DCDCDC;}
+.siteNavs .reminder{position:absolute;width:12px;height:12px;border-radius:999px;background:#B00;top:3px;left:50%;margin-left:10px;font-size:9px;line-height:12px;text-align:center;color:#FFF;}
+
+/* sell */
+.sell .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;font-size:12px;color:#888888;}
+.sell .pic{position:absolute;left:0;top:0;width:140px;height:140px;}
+.sell .img img{max-width:140px;max-height:140px;}
+.sell .infs{margin:8px 0;}
+.sell .inf{line-height:1.5;}
+.sell .name,.sell .price{color:#585858;font-size:15px;}
+.sell .name{line-height:1.1;}
+.sell .toDetail{position:absolute;right:10px;top:50%;margin-top:-10px;}
+.sell .opts{border-top:1px solid #C8C8C8;}
+.sell .opt{float:left;width:25%;}
+.sell .opt a{display:block;border-left:1px solid #E2E2E2;background:#FFF;font-size:15px;color:#585858;text-align:center;line-height:38px;}
+.sell .opt:first-child a{border-left:0;}
+.sell .blank{font-size:24px;color:#888888;text-align:center;padding:120px 0;}
+
+
+/* ---------- 0 login ------------ */
+.loginPanel{padding:15px 0;}
+.loginPanel .toStart{padding:0 15px;font-size:15px;text-align:right;}
+.loginPanel .toStart a b{text-decoration:underline;}
+.loginPanel .siteLogo{text-align:center;}
+.loginPanel .siteLogo img{width:98px;height:98px;}
+
+.loginForm{padding:25px 35px;}
+.loginForm .frms{margin-bottom:25px;}
+.loginForm .frm{margin-bottom:10px;border:1px solid #B1B1B1;position:relative;background:#FFF;padding:12px 5px;}
+.loginForm .frm .des{position:absolute;top:14px;left:10px;font-size:15px;}
+.loginForm .frm .data{margin-left:3em;}
+.loginForm .frm .data input{background:transparent;font-size:15px;display:block;width:100%;}
+
+.loginForm .login{padding:0 5px;}
+.loginForm .helps{margin:12px 0;font-size:15px;}
+.loginForm .remember{float:left;}
+.loginForm .remember .cbx{display:block;}
+.loginForm .remember .cbx input{margin-right:3px;vertical-align:-1px;}
+.loginForm .forget{float:right;}
+.loginForm .forget a{text-decoration:underline;}
+
+/* ---------- 1 produdcts ------------- */
+.prodList{}
+.prodList .sell{margin:10px;}
+
+.prodAdd{height:30px;}
+.prodAddWrap{position:fixed;right:5px;bottom:60px;z-index:99;}
+.prodAdd a{display:block;}
+
+body.guide_show .guide{display:block;}
+body.guide_show > .prodAdd{display:none;}
+.guide{background:rgba(0,0,0,.4);position:fixed;top:0;right:0;bottom:0;left:0;z-index:1000;display:none;}
+.guide .siteNav{position:absolute;bottom:0;left:50%;margin-left:-25px;width:50px;height:50px;background:#FFF;border-radius:25px;}
+.guide .arrow{position:absolute;padding-bottom:52px;min-width:40px;background:url("../image/arrow.png") no-repeat bottom right;-webkit-background-size:40px auto;background-size:40px auto;font-size:18px;color:#FFFFFF;}
+.guide .arrow_seller{bottom:50px;right:49%;}
+.guide .arrow_sell{bottom:102px;right:25px;}

@@ -1,0 +1,9 @@
+<div class="siteNavs">
+    <div class="wrap siteNavWrap">
+        <div class="siteNav on"><a href="#3" class="btn"><i class="i iN iN_A1"></i><b>商品</b></a></div><!-- @后端：当前页面增加类名on -->
+        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A2"></i><b>订单</b></a></div>
+        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A3"></i><b>商家</b></a></div>
+        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A4"></i><b>客户</b></a></div>
+        <div class="siteNav"><a href="#3" class="btn"><i class="i iN iN_A5"></i><b>更多</b></a></div>
+    </div>
+</div>

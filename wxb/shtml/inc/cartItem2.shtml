@@ -1,0 +1,10 @@
+        <div class="cartItem">
+            <div class="main">
+                <div class="name"><h4>正品新款格子大码针织连衣裙</h4></div>
+                <div class="pic pic_cover"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+                <div class="cid">商品号：<b>1236</b></div>
+                <div class="count">购买数：<b>2</b></div>
+                <div class="price"><b>￥1236</b></div>
+                <a href="javascript:;" class="delete"><b><i class="i iG iG_A4"></i></b></a>
+            </div>
+        </div>

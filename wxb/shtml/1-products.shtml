@@ -1,0 +1,50 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="opts sellsFilter">
+    <div class="wrap filterWrap">
+        <div class="opt"><a href="#3" class="choice">上架时间</a></div>
+        <div class="opt">
+            <label class="sel">
+                <select>
+                    <option value="">销量</option>
+                </select>
+            </label>
+        </div>
+        <div class="opt">
+            <label class="sel">
+                <select>
+                    <option value="">库存</option>
+                </select>
+            </label>
+        </div>
+        <div class="opt"><a href="#3" class="choice">已售完</a></div>
+    </div>
+</div>
+
+<div class="sells prodList">
+    <div class="sell">
+        <div class="blank">商品列表为空</div>
+    </div>
+<!--#include file="inc/sell.shtml"-->
+<!--#include file="inc/sell.shtml"-->
+<!--#include file="inc/sell.shtml"-->
+<!--#include file="inc/sell.shtml"-->
+</div>
+
+<div class="prodAdd"><div class="wrap prodAddWrap"><a href="#3"><i class="i i1"></i></a></div></div>
+
+<!--#include file="inc/toolbar.shtml"-->
+
+<div class="guide">
+    <div class="siteNav"><a href="javascript:" class="btn"><i class="i iN iN_A3"></i><b>商家</b></a></div>
+    <div class="prodAddWrap"><a href="javascript:"><i class="i i1"></i></a></div>
+    <div class="arrow arrow_seller">商家设置</div>
+    <div class="arrow arrow_sell">添加商品</div>
+</div>
+
+</body>
+</html>
