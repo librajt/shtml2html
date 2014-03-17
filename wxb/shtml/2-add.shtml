@@ -5,7 +5,73 @@
 <body>
 
 <div class="addProd">
-    
+    <div class="ap apPics">
+        <div class="hd cfx">
+            <div class="h2">商品图片</div>
+        </div>
+        <div class="cnt sPicList">
+            <div class="wrap picWrap">
+                <a href="javascript:" class="pic pic_added pic_cover"><div class="preview img"><img src="../image/d/1.jpg" alt=""></div><div class="des">删除</div></a>
+                <a href="javascript:" class="pic pic_add"><div class="preview">+</div><div class="des">添加</div></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ap apStyles">
+        <div class="cnt sStyleList">
+            <div class="wrap styleWrap">
+                <label class="radio"><input type="radio" name="prodstyle" value="1">新款</label>
+                <label class="radio"><input type="radio" name="prodstyle" value="2">爆款</label>
+                <label class="radio"><input type="radio" name="prodstyle" value="3">特价</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="ap apInfs">
+        <div class="hd cfx">
+            <div class="h2">商品信息</div>
+        </div>
+        <div class="cnt sInfTable noBoder">
+            <table>
+                <tr><td>商品型号</td><td colspan="3"><div class="txt sType"><input type="text"></div></td></tr>
+                <tr><td>批发价</td><td><div class="txt price_discount"><input type="text"></div></td><td>零售价</td><td><div class="txt price_original"><input type="text"></div></td></tr>
+                <tr><td>商品描述</td><td colspan="3"><div class="tarea sDesc"><textarea></textarea></div></td></tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="ap apType">
+        <div class="hd cfx">
+            <div class="h2">型号信息</div>
+            <div class="aside">
+                <a href="javascript:" class="btn btnB">复制</a>
+                <a href="javascript:" class="btn btnB btn_disabled">删除</a>
+            </div>
+        </div>
+        <div class="cnt sInfTable noBoder">
+            <table>
+                <tr><td>颜色</td><td colspan="3"><div class="txt sColor"><input type="text"></div></td></tr>
+                <tr><td>型号</td><td colspan="3"><div class="txt sType"><input type="text"></div></td></tr>
+                <tr><td>库存</td><td colspan="3"><div class="txt sTotal"><input type="text"></div></td></tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="ap apTypeAdd">
+        <div class="cnt">
+            <a href="javascript:" class="btn btnC"><i class="i i3"></i> 添加型号</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="pageOpts fixed">
+    <div class="wrap optWrap">
+        <div class="opt toCancel"><a href="javascript:;" class="btn btnD"><b>取消</b></a></div>
+        <div class="opt toFinish"><a href="#3" class="btn btnA"><b>完成</b></a></div>
+    </div>
 </div>
 
 </body>

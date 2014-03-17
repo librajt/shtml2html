@@ -1,11 +1,19 @@
-        <div class="order">
-            <a href="#3" class="main">
-                <div class="name"><h4>正品新款格子大码针织连衣裙</h4></div>
-                <div class="pic pic_cover"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
-                <div class="oid">订单号：<b>1236</b></div>
-                <div class="price">订单价：<b>￥1236</b></div>
-                <div class="status">订单状态：<b>商家已收款</b></div>
-                <div class="date">2014/1/15</div>
-                <div class="toDetail"><i class="i iG iG_A1"></i></div>
-            </a>
+<div class="order">
+    <div class="opts"><div class="opt quickPush"><a href="javascript:">发货</a></div></div>
+    <a href="#3" class="cnt">
+        <div class="main">
+            <div class="pic pic_cover"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+            <div class="name"><h4>丛老湿</h4></div>
+            <div class="infs">
+                <div class="inf phone"><b>12361235123</b></div>
+                <div class="inf address"><b>丛老湿丛老湿丛老湿 丛老湿丛老湿</b></div>
+            </div>
+            <div class="price">总价：<b>￥120</b></div>
+            <div class="toDetail"><i class="i iG iG_A1"></i></div>
         </div>
+        <div class="ft cfx">
+            <div class="des oId">订单编号：<b>12345678</b></div>
+            <div class="des date">2014/02/13</div>
+        </div>
+    </a>
+</div>

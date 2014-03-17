@@ -1,0 +1,74 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="orderDetail">
+    <div class="ap apInfs">
+        <div class="cnt oBasicInf">
+            <div class="frms">
+                <div class="frm oId"><div class="des">订单号：</div><div class="data">12345678</div></div>
+                <div class="frm reveiver"><div class="des">收件人：</div><div class="data">丛老湿</div></div>
+                <div class="frm phone"><div class="des">电　话：</div><div class="data">12345678901</div></div>
+                <div class="frm address"><div class="des">地　址：</div><div class="data">丛老湿 丛老湿 丛老湿 丛老湿 丛老湿 丛老湿</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ap apDetail">
+        <div class="cnt oDetail">
+            <div class="main">
+                <div class="pic"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+                <div class="sId">商品编号：<b>1236</b></div>
+                <div class="oDetailTable">
+                    <table>
+                        <tr><th>颜色</th><th>型号</th><th>数量</th></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                    </table>
+                </div>
+                <div class="price">小计：<b>￥1236</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ap apDetail">
+        <div class="cnt oDetail">
+            <div class="main">
+                <div class="pic"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+                <div class="sId">商品编号：<b>1236</b></div>
+                <div class="oDetailTable">
+                    <table>
+                        <tr><th>颜色</th><th>型号</th><th>数量</th></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                        <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                    </table>
+                </div>
+                <div class="price">小计：<b>￥1236</b></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="pageOpts fixed">
+    <div class="wrap optWrap">
+        <div class="opt goBack"><a href="javascript:;" class="btn btnD"><b>返回</b></a></div>
+        <div class="opt toCancel"><a href="javascript:;" class="btn btnD"><b>取消订单</b></a></div>
+        <div class="opt toFinish"><a href="#3" class="btn btnA"><b>确认发货</b></a></div>
+    </div>
+</div>
+
+
+</body>
+</html>
