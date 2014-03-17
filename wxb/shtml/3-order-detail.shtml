@@ -5,6 +5,8 @@
 <body>
 
 <div class="orderDetail">
+    <div class="total"><div class="cnt">合计：￥680</div></div>
+
     <div class="ap apInfs">
         <div class="cnt oBasicInf">
             <div class="frms">
@@ -55,8 +57,6 @@
             </div>
         </div>
     </div>
-
-    <div class="total">合计：￥680</div>
 
 </div>
 

@@ -255,12 +255,13 @@ body.guide_show > .prodAdd{display:none;}
 
 /* ---------- 3 order detail ------------- */
 .orderDetail{padding:10px;}
-.orderDetail .total{font-size:18px;color:#585858;text-align:right;}
+.orderDetail .total{position:relative;}
+.orderDetail .total .cnt{position:absolute;top:0;right:5px;z-index:1;font-size:18px;color:#585858;text-align:right;line-height:29px;}
 
 .oBasicInf{}
 .oBasicInf .frm{position:relative;padding:5px;}
 .oBasicInf .frm .des{position:absolute;top:6px;left:10px;font-size:15px;}
-.oBasicInf .frm .data{margin-left:4em;font-size:15px;line-height:1.2;}
+.oBasicInf .frm .data{margin-left:4.5em;font-size:15px;line-height:1.2;}
 .oBasicInf .oId{border-bottom:1px solid #EAEAEA;}
 
 .oDetail .main{display:block;padding:10px;background:#FFFFFF;padding-left:150px;position:relative;min-height:120px;font-size:12px;color:#888888;}
