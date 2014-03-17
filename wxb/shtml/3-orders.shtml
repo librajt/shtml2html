@@ -7,13 +7,16 @@
 <div class="orders">
     <div class="tabs orderFilter">
         <div class="wrap tabWrap cfx">
-            <div class="tab tab_on"><a href="javascript:">未发货</a></div>
+            <div class="tab tab_on"><a href="javascript:">未发货</a></div><!-- @后端： 增加类名 tab_on 为选中状态 -->
             <div class="tab"><a href="javascript:">已发货</a></div>
             <div class="tab"><a href="javascript:">已取消</a></div>
         </div>
     </div>
     
     <div class="orderList">
+        <div class="order">
+            <div class="blank">订单列表为空</div>
+        </div>
 <!--#include file="inc/order.shtml"-->
 <!--#include file="inc/order.shtml"-->
 <!--#include file="inc/order.shtml"-->

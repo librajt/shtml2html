@@ -4,6 +4,36 @@
 </head>
 <body>
 
+<div class="ownerSetting">
+    <div class="ap apPic">
+        <div class="cnt">
+            <div class="ownerPicAdd upload"><input type="file"><i class="i i3"></i> 添加图片</div>
+        </div>
+    </div>
+
+    <div class="app appDesc">
+        <div class="hd">商家描述</div>
+        <div class="bd"><div class="ownerDesc"><div class="tarea"><textarea></textarea></div></div></div>
+    </div>
+    
+    <div class="app appCount">
+        <div class="hd">批发设置</div>
+        <div class="bd">
+            <div class="num">
+                <div class="numWrap">
+                    <button class="btn minus disable"><i class="i iG iG_C1"></i></button>
+                    <input type="tel" class="cnt">
+                    <button class="btn plus disable"><i class="i iG iG_C2"></i></button>
+                </div>
+                <div class="des">件起批</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="opt"><a href="#3" class="btn btnA">保 存</a></div>
+
+</div>
+
 <!--#include file="inc/toolbar.shtml"-->
 
 </body>
