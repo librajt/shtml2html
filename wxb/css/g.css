@@ -262,7 +262,7 @@ body.guide_show > .prodAdd{display:none;}
 .sTypeFrm .des{position:absolute;left:0;top:15px;font-size:15px;}
 .sTypeFrm .data{margin-left:50px;font-size:0;}
 .sTypeFrm .choice{display:inline-block;vertical-align:top;margin:0 10px 5px 0;}
-.sTypeFrm .choice .cnt{line-height:40px;width:70px;border:1px solid #818181;padding:1px;font-size:15px;color:#585858;text-align:center;}
+.sTypeFrm .choice .cnt{line-height:40px;width:66px;border:1px solid #818181;padding:1px;font-size:15px;color:#585858;text-align:center;}
 .sTypeFrm .choice_on .cnt{padding:0;border:2px solid #A276DD;}
 .sTypeFrm .choice_input{display:block;margin-right:0;}
 .sTypeFrm .choice_input .cnt{width:auto;}
