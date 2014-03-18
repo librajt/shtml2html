@@ -120,7 +120,7 @@ body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:aut
 .sell .toDetail{position:absolute;right:10px;top:50%;margin-top:-10px;}
 .sell .opts{border-top:1px solid #C8C8C8;}
 .sell .opt{float:left;width:25%;}
-.sell .opt a{display:block;border-left:1px solid #E2E2E2;background:#FFF;font-size:15px;color:#585858;text-align:center;line-height:38px;}
+.sell .opt a{display:block;border-left:1px solid #E2E2E2;background:#FBFBFB;font-size:15px;color:#585858;text-align:center;line-height:38px;}
 .sell .opt:first-child a{border-left:0;}
 .sell .blank{font-size:24px;color:#888888;text-align:center;padding:120px 0;}
 
