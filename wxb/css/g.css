@@ -70,10 +70,10 @@ body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:aut
 .txt input,.tarea textarea{display:block;width:100%;}
 
 /* table */
-table.noBoder tr td:first-child{border-left:0;}
-table.noBoder tr td:last-child{border-right:0;}
-table.noBoder tr:first-child td{border-top:0;}
-table.noBoder tr:last-child td{border-bottom:0;}
+.noBorder tr td:first-child{border-left:0;}
+.noBorder tr td:last-child{border-right:0;}
+.noBorder tbody:first-child tr:first-child td{border-top:0;}
+.noBorder tbody:last-child tr:last-child td{border-bottom:0;}
 
 
 /* pic */
@@ -242,8 +242,8 @@ body.guide_show > .prodAdd{display:none;}
 
 .sTypes{}
 .sTypes table{width:100%;}
-.sTypes th,.sTypes td{border:1px solid #E2E2E2;font-size:15px;width:33%;text-align:center;font-weight:normal;line-height:42px;}
-.sTypes th{background:#FBFBFB;}
+.sTypes td{border:1px solid #E2E2E2;font-size:15px;width:33%;text-align:center;font-weight:normal;line-height:42px;}
+.sTypes .title td{background:#FBFBFB;}
 .sTypes .data td:last-child{position:relative;}
 .sTypes .data td:last-child:after{content:'';position:absolute;z-index:0;width:16px;height:16px;right:10px;top:50%;margin-top:-8px;background:url("../image/iSel.png") no-repeat;-webkit-background-size:16px auto;background-size:16px auto;}
 .sTypes .show .data td:last-child:after{background-position:left bottom;}

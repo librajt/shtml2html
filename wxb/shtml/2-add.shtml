@@ -1,13 +1,20 @@
 <!--#include file="inc/_head.shtml"-->
 <title></title>
 <!--#include file="inc/_link_g.shtml"-->
+
+<style>
+/* 静态页面显示用样式，不用加到开发页面中 */
+.addProd{position:relative;z-index:1;}
+</style>
+
+
 </head>
 <body>
 
 <div class="addProd">
 
     <div class="ap apSort">
-        <div class="cnt sInfTable noBoder">
+        <div class="cnt sInfTable noBorder">
             <table>
                 <tr><td>所属分类</td><td colspan="3"><div class="sel sSort"><select><option value="1">服装</option></select></div></td></tr>
             </table>
@@ -35,7 +42,7 @@
     </div>
 
     <div class="ap apInfs">
-        <div class="cnt sInfTable noBoder">
+        <div class="cnt sInfTable noBorder">
             <table>
                 <tr><td>商品型号</td><td colspan="3"><div class="txt sType"><input type="text"></div></td></tr>
                 <tr><td>批发价</td><td><div class="txt price_discount"><input type="text"></div></td><td>零售价</td><td><div class="txt price_original"><input type="text"></div></td></tr>
@@ -46,10 +53,10 @@
     </div>
 
     <div class="ap apTypeList">
-        <div class="cnt sTypes noBoder">
+        <div class="cnt sTypes noBorder">
             <table>
                 <tbody>
-                    <tr><th>颜色</th><th>型号</th><th>库存</th></tr>
+                    <tr class="title"><td>颜色</td><td>型号</td><td>库存</td></tr>
                 </tbody>
                 <tbody class="show"> <!-- @后端：点击显示时增加 show -->
                     <tr class="data"><td>红色</td><td>XL</td><td>123</td></tr>
