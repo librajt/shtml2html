@@ -21,9 +21,7 @@ body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:aut
 .ap,
 .order .cnt,
 .tabs,
-.btnA,
-.btnB,
-.btnC,
+.btn,
 .box{-webkit-box-shadow:1px 1px 1px rgba(0,0,0,.07);-moz-box-shadow:1px 1px 1px rgba(0,0,0,.07);box-shadow:1px 1px 1px rgba(0,0,0,.07);}
 
 /* ico   iG_A1代表global图片中的A行1列图标 */
@@ -194,14 +192,14 @@ table.noBoder tr:last-child td{border-bottom:0;}
 .sellsFilter .wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:-ms-flex;display:flex;}
 .sellsFilter .opt{width:25%;-webkit-box-flex:1;-webkit-flex:1 1 0;-ms-flex:1 1 0;flex:1 1 0;border-left:1px solid #F3F3F3;background:#FFFFFF;}
 .sellsFilter .opt:first-child{border-left:0;}
-.sellsFilter .choice{display:block;line-height:45px;height:45px;font-size:15px;color:#585858;}
-.sellsFilter .choice select{height:45px;font-size:15px;color:#585858;padding:0 5px;}
-.sellsFilter a.choice{padding:0 5px;}
-.sellsFilter a.choice_on{background:#A9A9A9;color:#FFF;}
-.sellsFilter .sel.choice_on{background:#A9A9A9;}
-.sellsFilter .sel.choice_on select{color:#FFF;}
-.sellsFilter .sel.choice_on_0:after{background-position:0 -18px;}
-.sellsFilter .sel.choice_on_1:after{background-position:0 -36px;}
+.sellsFilter .choice{display:block;line-height:45px;height:45px;font-size:15px;color:#585858;text-align:center;}
+.sellsFilter .choice{padding:0 5px;}
+.sellsFilter .choice_on{background:#A9A9A9;color:#FFF;}
+.sellsFilter .choice_range{position:relative;}
+.sellsFilter .choice_range:after{content:'';position:absolute;z-index:1;width:16px;height:16px;right:10px;top:50%;margin-top:-8px;background:url("../image/iSel.png") no-repeat;-webkit-background-size:16px auto;background-size:16px auto;}
+.sellsFilter .choice_on{background:#A9A9A9;}
+.sellsFilter .choice_range.choice_on_0:after{background-position:0 -16px;}
+.sellsFilter .choice_range.choice_on_1:after{background-position:0 -32px;}
 
 .prodList{}
 .prodList .sell{margin:10px;}
