@@ -5,10 +5,17 @@
 <body>
 
 <div class="addProd">
-    <div class="ap apPics">
-        <div class="hd cfx">
-            <div class="h2">商品图片</div>
+
+    <div class="ap apSort">
+        <div class="cnt sInfTable noBoder">
+            <table>
+                <tr><td>所属分类</td><td colspan="3"><div class="sel sSort"><select><option value="1">服装</option></select></div></td></tr>
+            </table>
         </div>
+
+    </div>
+
+    <div class="ap apPics">
         <div class="cnt sPicList">
             <div class="wrap picWrap">
                 <a href="javascript:" class="pic pic_added pic_cover"><div class="preview img"><img src="../image/d/1.jpg" alt=""></div><div class="des">删除</div></a>
@@ -28,9 +35,6 @@
     </div>
 
     <div class="ap apInfs">
-        <div class="hd cfx">
-            <div class="h2">商品信息</div>
-        </div>
         <div class="cnt sInfTable noBoder">
             <table>
                 <tr><td>商品型号</td><td colspan="3"><div class="txt sType"><input type="text"></div></td></tr>
@@ -41,19 +45,28 @@
 
     </div>
 
-    <div class="ap apType">
-        <div class="hd cfx">
-            <div class="h2">型号信息</div>
-            <div class="aside">
-                <a href="javascript:" class="btn btnB">复制</a>
-                <a href="javascript:" class="btn btnB btn_disabled">删除</a><!-- @后端：不可用时增加类名 btn_disabled -->
-            </div>
-        </div>
-        <div class="cnt sInfTable noBoder">
+    <div class="ap apTypeList">
+        <div class="cnt sTypes noBoder">
             <table>
-                <tr><td>颜色</td><td colspan="3"><div class="txt sColor"><input type="text"></div></td></tr>
-                <tr><td>型号</td><td colspan="3"><div class="txt sType"><input type="text"></div></td></tr>
-                <tr><td>库存</td><td colspan="3"><div class="txt sTotal"><input type="text"></div></td></tr>
+                <tbody>
+                    <tr><th>颜色</th><th>型号</th><th>库存</th></tr>
+                </tbody>
+                <tbody class="show"> <!-- @后端：点击显示时增加 show -->
+                    <tr class="data"><td>红色</td><td>XL</td><td>123</td></tr>
+                    <tr class="opts"><td><a href="javascript:">编辑</a></td><td><a href="javascript:">复制</a></td><td><a href="javascript:">删除</a></td></tr>
+                </tbody>
+                <tbody class="">
+                    <tr class="data"><td>红色</td><td>XL</td><td>123</td></tr>
+                    <tr class="opts"><td><a href="javascript:">编辑</a></td><td><a href="javascript:">复制</a></td><td><a href="javascript:">删除</a></td></tr>
+                </tbody>
+                <tbody class="">
+                    <tr class="data"><td>红色</td><td>XL</td><td>123</td></tr>
+                    <tr class="opts"><td><a href="javascript:">编辑</a></td><td><a href="javascript:">复制</a></td><td><a href="javascript:">删除</a></td></tr>
+                </tbody>
+                <tbody class="">
+                    <tr class="data"><td>红色</td><td>XL</td><td>123</td></tr>
+                    <tr class="opts"><td><a href="javascript:">编辑</a></td><td><a href="javascript:">复制</a></td><td><a href="javascript:">删除</a></td></tr>
+                </tbody>
             </table>
         </div>
 
@@ -65,14 +78,63 @@
         </div>
     </div>
 
+    <div class="pageOpts fixed">
+        <div class="wrap optWrap">
+            <div class="opt toCancel"><a href="javascript:;" class="btn btnD"><b>取消</b></a></div>
+            <div class="opt toFinish"><a href="#3" class="btn btnA"><b>完成</b></a></div>
+        </div>
+    </div>
+
 </div>
 
-<div class="pageOpts fixed">
-    <div class="wrap optWrap">
-        <div class="opt toCancel"><a href="javascript:;" class="btn btnD"><b>取消</b></a></div>
-        <div class="opt toFinish"><a href="#3" class="btn btnA"><b>完成</b></a></div>
+<!-- @后端：点击添加型号后，两个div切换显示 -->
+<div class="setProdType">
+    <div class="sTypeBoard">
+        <div class="typeBoard">
+            <div class="sTypeFrm type_color">
+                <div class="des">颜色：</div>
+                <div class="data">
+                    <a href="javascript:" class="choice choice_on"><div class="cnt">红色</div></a><!-- @后端：选中状态 -->
+                    <a href="javascript:" class="choice"><div class="cnt">红色</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">红色</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">红色</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">红色</div></a>
+                    <div class="choice choice_input"><div class="cnt txt"><input type="text" placeholder="自定义"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="typeBoard">
+            <div class="sTypeFrm type_type">
+                <div class="des">型号：</div>
+                <div class="data">
+                    <a href="javascript:" class="choice choice_on"><div class="cnt">M</div></a><!-- @后端：选中状态 -->
+                    <a href="javascript:" class="choice"><div class="cnt">SM</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">S</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">L</div></a>
+                    <a href="javascript:" class="choice"><div class="cnt">XL</div></a>
+                    <div class="choice choice_input"><div class="cnt txt"><input type="text" placeholder="自定义"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="typeBoard">
+            <div class="sTypeFrm type_total">
+                <div class="des">库存：</div>
+                <div class="data">
+                    <div class="choice choice_input"><div class="cnt txt"><input type="text"></div></div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="pageOpts">
+        <div class="wrap optWrap">
+            <div class="opt toCancel"><a href="javascript:;" class="btn btnD"><b>取消</b></a></div>
+            <div class="opt toSubmit"><a href="#3" class="btn btnA"><b>提交</b></a></div>
+        </div>
+    </div>
+
 </div>
+
 
 </body>
 </html>
