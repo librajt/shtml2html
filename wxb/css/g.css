@@ -47,7 +47,7 @@ body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:aut
 
 /* upload */
 .upload{position:relative;overflow:hidden;}
-.upload input{position:absolute;height:100%;width:100%;opacity:0;}
+.upload input{position:absolute;height:100%;width:100%;opacity:0;z-index:9;}
 
 /* frm */
 .frm{display:block;}
@@ -316,7 +316,7 @@ body.guide_show > .prodAdd{display:none;}
 
 .num{margin-bottom:10px;margin-left:5px;}
 .numWrap{display:inline-block;vertical-align:middle;font-size:0;}
-.num .btn{width:30px;height:30px;border:1px solid #B1B1B1;font-size:24px;color:#808080;text-align:center;background-image:-webkit-linear-gradient(bottom, #DBDBDB, #FFF);background-image:linear-gradient(to top, #DBDBDB, #FFF);}
+.num .btn{width:30px;height:30px;border:1px solid #B1B1B1;-webki-box-sizing:border-box;box-sizing:border-box;display:inline-block;vertical-align:middle;font-size:24px;color:#808080;text-align:center;background-image:-webkit-linear-gradient(bottom, #DBDBDB, #FFF);background-image:linear-gradient(to top, #DBDBDB, #FFF);}
 .num .btn .i{vertical-align:-2px;}
 .num .cnt{font-size:14px;height:30px;border:1px solid #B1B1B1;width:60px;text-align:center;margin:0 -1px;}
 .num .disable{background:#E6E6E6;}

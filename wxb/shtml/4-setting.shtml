@@ -21,16 +21,16 @@
         <div class="bd">
             <div class="num">
                 <div class="numWrap">
-                    <button class="btn minus disable"><i class="i iG iG_C1"></i></button>
+                    <a href="javascript:" class="btn minus disable"><i class="i iG iG_C1"></i></a>
                     <input type="tel" class="cnt">
-                    <button class="btn plus disable"><i class="i iG iG_C2"></i></button>
+                    <a href="javascript:" class="btn plus disable"><i class="i iG iG_C2"></i></a>
                 </div>
                 <div class="des">件起批</div>
             </div>
         </div>
     </div>
 
-    <div class="opt"><a href="#3" class="btn btnA">保 存</a></div>
+    <div class="opt"><input type="submit" class="btn btnA" value="保 存"></div>
 
 </div>
 
