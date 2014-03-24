@@ -7,7 +7,7 @@ em,i,b{font-style:normal;font-weight:normal;}
 img{border:none;}
 button,input,img,video{vertical-align:middle;}
 input[type="text"],input[type="tel"],input[type="password"],input[type="button"],input[type="submit"],button,textarea,select{-webkit-appearance:none;border:0;outline:none;border-radius:0;}
-button,input,select,textarea{-webkit-box-sizing:border-box;box-sizing:border-box;}
+button,input,select,textarea{-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:0;}
 a{text-decoration:none;color:#008AFF;}
 body,button,input,select,textarea{font-family:\5fae\8f6f\96c5\9ed1,Arial,Helvetica,sans-serif;}
 
@@ -239,7 +239,7 @@ body.guide_show > .prodAdd{display:none;}
 .sInfTable table{width:100%;}
 .sInfTable td{border:1px solid #E2E2E2;padding:5px;font-size:15px;}
 .sInfTable td:nth-child(2n-1){width:25%;background:#FBFBFB;}
-.sInfTable .txt input,.sInfTable .tarea textarea,.sInfTable .sel select{padding:5px;font-size:15px;}
+.sInfTable .txt input,.sInfTable .tarea textarea,.sInfTable .sel select{padding:5px;font-size:15px;border:0;}
 
 .sTypes{}
 .sTypes table{width:100%;}
@@ -316,9 +316,9 @@ body.guide_show > .prodAdd{display:none;}
 
 .num{margin-bottom:10px;margin-left:5px;}
 .numWrap{display:inline-block;vertical-align:middle;font-size:0;}
-.num .btn{width:30px;height:30px;border:1px solid #B1B1B1;-webki-box-sizing:border-box;box-sizing:border-box;display:inline-block;vertical-align:middle;font-size:24px;color:#808080;text-align:center;background-image:-webkit-linear-gradient(bottom, #DBDBDB, #FFF);background-image:linear-gradient(to top, #DBDBDB, #FFF);}
+.num .btn{width:30px;height:30px;border:1px solid #B1B1B1;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;vertical-align:middle;font-size:24px;color:#808080;text-align:center;background-image:-webkit-linear-gradient(bottom, #DBDBDB, #FFF);background-image:linear-gradient(to top, #DBDBDB, #FFF);}
 .num .btn .i{vertical-align:-2px;}
-.num .cnt{font-size:14px;height:30px;border:1px solid #B1B1B1;width:60px;text-align:center;margin:0 -1px;border-radius:0;-webki-box-sizing:border-box;box-sizing:border-box;}
+.num .cnt{font-size:14px;height:30px;border:1px solid #B1B1B1;width:60px;text-align:center;margin:0 -1px;}
 .num .disable{background:#E6E6E6;}
 .num .des{display:inline-block;vertical-align:middle;margin-left:10px;}
 
