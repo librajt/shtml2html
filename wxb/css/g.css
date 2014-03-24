@@ -47,7 +47,7 @@ body{background:#F3F3F3;color:#585858;min-height:100%;min-width:320px;margin:aut
 
 /* upload */
 .upload{position:relative;overflow:hidden;}
-.upload input{position:absolute;height:100%;width:100%;opacity:0;z-index:9;}
+.upload input{position:absolute;left:0;top:0;height:100%;width:100%;opacity:0;z-index:9;}
 
 /* frm */
 .frm{display:block;}
@@ -308,7 +308,10 @@ body.guide_show > .prodAdd{display:none;}
 .ownerSetting .app .hd{padding:5px;font-size:18px;line-height:1.4;}
 .ownerSetting .opt{margin-top:30px;}
 
-.ownerPicAdd{height:120px;line-height:120px;text-align:center;font-size:16px;}
+.ownerPicAdd{min-height:120px;}
+.ownerPicAdd .des{position:absolute;z-index:1;left:0;right:0;top:50%;height:20px;margin-top:-10px;text-align:center;font-size:16px;}
+.ownerPicAdd .img{position:relative;z-index:8;}
+.ownerPicAdd .img img{display:none;width:100%;}
 
 .ownerDesc{}
 .ownerDesc .tarea{border:1px solid #B1B1B1;}
