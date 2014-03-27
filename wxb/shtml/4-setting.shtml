@@ -29,6 +29,11 @@
         <div class="hd">商家描述</div>
         <div class="bd"><div class="ownerDesc"><div class="tarea"><textarea></textarea></div></div></div>
     </div>
+
+    <div class="app appPhone">
+        <div class="hd">电话</div>
+        <div class="bd"><div class="ownerPhone"><div class="txt"><input type="text"></div></div></div>
+    </div>
     
     <div class="app appCount">
         <div class="hd">批发设置</div>
