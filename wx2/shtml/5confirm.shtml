@@ -1,0 +1,92 @@
+<!--#include file="inc/_head.shtml"-->
+<title></title>
+<!--#include file="inc/_link_g.shtml"-->
+</head>
+<body>
+
+<div class="orderConfirm">
+    
+    <div class="ap apPayInfo">
+        <div class="hd cfx">
+            <h3>结算信息</h3>
+            <div class="aside"><div class="payTotal">合计：<span>￥12345.67</span></div></div>
+        </div>
+        <div class="bd">
+            <div class="detailList">
+
+                <div class="ap apDetail">
+                    <div class="oDetail">
+                        <div class="main">
+                            <div class="pic pic_cover"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+                            <div class="sId">商品编号：<b>1236</b></div>
+                            <div class="oDetailTable">
+                                <table>
+                                    <tbody><tr><th>颜色</th><th>型号</th><th>数量</th></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                </tbody></table>
+                            </div>
+                            <div class="price">小计：<b>￥1236</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ap apDetail">
+                    <div class="oDetail">
+                        <div class="main">
+                            <div class="pic pic_cover"><div class="img"><img src="../image/d/2.jpg" alt=""></div></div>
+                            <div class="sId">商品编号：<b>1236</b></div>
+                            <div class="oDetailTable">
+                                <table>
+                                    <tbody><tr><th>颜色</th><th>型号</th><th>数量</th></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                    <tr><td>红色</td><td>XL</td><td>5</td></tr>
+                                </tbody></table>
+                            </div>
+                            <div class="price">小计：<b>￥1236</b></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ap apAddressInfo">
+        <div class="hd">
+            <h3>收货信息</h3>
+        </div>
+        <div class="bd">
+            <div class="addressInfo">
+                <label class="frm reveiver">
+                    <div class="des">收货人：</div>
+                    <div class="data"><div class="txt"><input type="text"></div></div>
+                </label>
+                <label class="frm tel">
+                    <div class="des">电　话：</div>
+                    <div class="data"><div class="txt"><input type="text"></div></div>
+                </label>
+                <label class="frm address">
+                    <div class="des">地　址：</div>
+                    <div class="data"><div class="tarea"><textarea name="" id="" cols="30" rows="10"></textarea></div></div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="pageOpts fixed">
+        <div class="wrap optWrap">
+            <div class="opt goBack"><a href="javascript:;" class="btn btnC"><b>上一步</b></a></div>
+            <div class="opt toFinish"><a href="#3" class="btn btnB"><b>提交订单</b></a></div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

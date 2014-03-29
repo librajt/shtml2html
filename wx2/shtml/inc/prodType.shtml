@@ -1,0 +1,14 @@
+<div class="prodType">
+    <div class="hd cfx">
+        <div class="h2">爆款</div>
+        <div class="aside"><a href="#3" class="toMore">查看全部&gt;</a></div>
+    </div>
+    <div class="bd">
+        <div class="prodList cfx">
+<!--#include file="prod.shtml"-->
+<!--#include file="prod.shtml"-->
+<!--#include file="prod.shtml"-->
+<!--#include file="prod.shtml"-->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+        <div class="order">
+            <a href="#3" class="main">
+                <div class="oid"><h4>订单号：<b>1236</b></h4></div>
+                <div class="pic pic_cover"><div class="img"><img src="../image/d/1.jpg" alt=""></div></div>
+                <div class="status">状态：<b>商家已收款</b></div>
+                <div class="count">商品：<b>20件</b></div>
+                <div class="price">总价：<b>￥1236</b></div>
+                <div class="date">2014/1/15</div>
+                <div class="toDetail"><i class="i iG iG_A1"></i></div>
+            </a>
+        </div>
